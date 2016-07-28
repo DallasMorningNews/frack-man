@@ -1,5 +1,6 @@
 .env
 aws.json
+awspublish-interactives.dallasnews.com
 
 # Local cache
 cache
