@@ -1,0 +1,106 @@
+//  _____           _                    _____ _         _
+// /  __ \         | |                  /  ___| |       | |
+// | /  \/_   _ ___| |_ ___  _ __ ___   \ `--.| |_ _   _| | ___  ___
+// | |   | | | / __| __/ _ \| '_ ` _ \   `--. \ __| | | | |/ _ \/ __|
+// | \__/\ |_| \__ \ || (_) | | | | | | /\__/ / |_| |_| | |  __/\__ \
+//  \____/\__,_|___/\__\___/|_| |_| |_| \____/ \__|\__, |_|\___||___/
+//                                                  __/ |
+//                                                 |___/
+
+@import 'variables';
+@import 'mixins';
+
+
+
+html, body {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+body {
+    margin: 0;
+}
+
+#accordionWrapper {
+    min-height: 100%;
+    overflow: hidden;
+    display: block;
+    position: relative;
+    height: 100vh;
+    max-height: 800px;
+    border-top: 5px solid $chartCopy;
+    border-bottom: 5px solid $chartCopy;
+}
+
+#accordionWrapper ol {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+#accordionWrapper ol li {
+    position: absolute;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 94%;
+}
+
+#panel3 {
+    z-index: 100;
+    left: 6%;
+}
+
+#panel2 {
+    z-index: 50;
+    left: 3%;
+}
+
+#panel1 {
+    z-index: 1;
+}
+
+.tab {
+    position: absolute;
+    z-index: 1000;
+    width: 10%;
+    min-width: 30px;
+    height: 100vh;
+    display: inline-block;
+    background: $chartCopy;
+    margin-top: 0px;
+    padding-bottom: 0px;
+    color: white;
+    border-left: 1px solid black;
+    -webkit-box-shadow: 5px 0px 15px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px 0px 15px -4px rgba(0,0,0,0.75);
+    box-shadow: 4px 0px 15px -4px rgba(0,0,0,0.75);
+    h5 {
+        transform: rotate(90deg);
+        transform-origin: left top 0;
+        margin-top: 20px;
+        width: 100vh;
+        height: 30px;
+        padding-right: 30px;
+        margin-left: 30px;
+    }
+}
+
+#tab3 {
+    background-color: $chartRed;
+    h5 {
+        color: white;
+    }
+}
+
+.panel-content {
+    width: 100%;
+    height: 100vh;
+    background: white;
+    z-index: 200;
+    display: inline-block;
+    position: absolute;
+}
