@@ -2,11 +2,81 @@ $(document).ready(function() {
 
 	//custom scripting goes here
 
+	var breakeven = [];
+
+	// Break even D3 bar graph
+
+	$.getJSON("js/data.json", function(data) {
+		breakeven = data;
+		drawChart(breakeven, "#chart-wrapper");
+	});
+
+	function drawChart(data, targetDiv) {
+		var w = $("#chart-wrapper").width(),
+		 	h = 300;
+
+		var xScale = d3.scale.linear()
+						.domain([0, d3.max(data, function (d) {
+							return d.dollars;
+						})])
+						.range([0, w]);
+
+	 	var yScale = d3.scale.ordinal()
+						.domain(d3.range(data.length))
+						.rangeRoundBands([0, h], 0.5);
+
+		var svg = d3.select(targetDiv)
+					.append("svg")
+					.attr("width", w)
+					.attr("height", h)
+					.attr("id", "chart");
+
+		svg.selectAll("rect")
+			.data(data)
+			.enter()
+			.append("rect")
+			.attr("x", function(d) {
+				return xScale(0);
+			})
+			.attr("y", function(d, i) {
+				return yScale(i);
+			})
+			.attr("width", function(d) {
+				return xScale(d.dollars);
+			})
+			.attr("height", yScale.rangeBand())
+			.attr("fill", "black");
+
+		svg.selectAll("text")
+			.data(data)
+			.enter()
+			.append("text")
+			.text(function(d) {
+				return d.name;
+			})
+			.attr("x", function(d) {
+				return xScale(0);
+			})
+			.attr("y", function(d, i) {
+				return yScale(i);
+			})
+			.attr("class", "labels");
+
+	}
+
+
+	$(window).resize(function() {
+
+		setTimeout(function(){
+			chartWidth = $("#chart-wrapper").width();
+			$("#chart").remove();
+			drawChart(breakeven, "#chart-wrapper");
+		}, 250);
+
+	});
 
 
 	// horizontal accordion
-
-
 	$('#panel3').on('click', function(){
 
 		  $('#panel2').animate({"left":"3%"});
