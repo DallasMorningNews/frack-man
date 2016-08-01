@@ -22,15 +22,18 @@ body {
     margin: 0;
 }
 
-#accordionWrapper {
-    min-height: 100%;
-    overflow: hidden;
-    display: block;
-    position: relative;
-    height: 100vh;
-    max-height: 800px;
-    border-top: 5px solid $chartCopy;
-    border-bottom: 5px solid $chartCopy;
+.hide {
+    display: none;
+}
+
+header#storyHead {
+    position: absolute;
+    max-width: 100%;
+    top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    color: white;
 }
 
 #accordionWrapper ol {
@@ -41,7 +44,8 @@ body {
 }
 
 #accordionWrapper ol li {
-    position: absolute;
+    position: fixed;
+    top: 0;
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -49,14 +53,19 @@ body {
     width: 94%;
 }
 
+#panel4 {
+    z-index: 101;
+    left: 98%;
+}
+
 #panel3 {
     z-index: 100;
-    left: 6%;
+    left: 96%;
 }
 
 #panel2 {
     z-index: 50;
-    left: 3%;
+    left: 94%;
 }
 
 #panel1 {
@@ -66,43 +75,42 @@ body {
 .tab {
     position: absolute;
     z-index: 1000;
-    width: 10%;
-    min-width: 30px;
+    width: 90px;
+    min-width: 90px;
     height: 100vh;
     display: inline-block;
-    background: $chartCopy;
+    background: #232322;
     margin-top: 0px;
     padding-bottom: 0px;
-    color: white;
-    border-left: 1px solid black;
+    border-left: 2px solid #2d2d2b;
     -webkit-box-shadow: 5px 0px 15px -4px rgba(0,0,0,0.75);
     -moz-box-shadow: 5px 0px 15px -4px rgba(0,0,0,0.75);
     box-shadow: 4px 0px 15px -4px rgba(0,0,0,0.75);
+    cursor: pointer;
     h5 {
         transform: rotate(90deg);
         transform-origin: left top 0;
-        margin-top: 20px;
+        margin-top: 70px;
         width: 100vh;
         height: 30px;
         padding-right: 30px;
         margin-left: 30px;
+        font-size: 18px;
+        color: #ccc;
     }
 }
 
-#tab3 {
-    background-color: $chartRed;
+#tab1 {
+    background-color: #713032;
     h5 {
-        color: white;
+        color: #ccc;
     }
 }
 
-.panel-content {
-    width: 100%;
-    height: 100vh;
-    background: white;
-    z-index: 200;
-    display: inline-block;
-    position: absolute;
+.panel {
+    -webkit-box-shadow: -4px 0px 10px -4px rgba(0,0,0,0.50);
+    -moz-box-shadow: -4px 0px 10px -4px rgba(0,0,0,0.50);
+    box-shadow: -4px 0px 10px -4px rgba(0,0,0,0.50);
 }
 
 /* breakeven chart */
@@ -117,4 +125,5 @@ body {
     color: white;
     font-family: $sans;
     font-size: 12px;
+    padding-left: 50px;
 }

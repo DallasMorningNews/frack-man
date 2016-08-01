@@ -152,16 +152,20 @@ googletag.enableServices();
 
 	
 <section id="contentHeader">
-	<img src="images/_defaultImage.jpg" alt="#" />
-	<p class="cutline">Cutline goes here. You can remove this tag if you don't feel the lead image needs a cutline</p>
-
+	<img src="images/_trophyCase.jpg" alt="#" />
+	<!-- <p class="cutline">Cutline goes here. You can remove this tag if you don't feel the lead image needs a cutline</p> -->
+    <header id="storyHead">
+		<h3>Label, if needed</h3>
+		<h1>Main Headline</h1>
+		<h2>Deck head goes in this spot here</h2>
+	</header>
 
 </section>
 <!-- end contentHeader -->
 
 
 
-<section class="contentWell clearFix">
+<section class="contentWell clearFix hide">
 
 	<header id="storyHead">
 		<h3>Label, if needed</h3>
@@ -196,29 +200,37 @@ googletag.enableServices();
 
         <div id="accordionWrapper" role="main">
             <ol>
+                <li id="panel4" class="panel">
+                    <div id="tab4" class="tab">
+                        <h5 class="label">Panel four</h5>
+                    </div>
+                    <!-- <div class="panel-content">
+                        <h1>This is a fake sentence. Enjoy.</h1>
+                    </div> -->
+                </li>
                 <li id="panel3" class="panel">
                     <div id="tab3" class="tab">
-                        <h5 class="label">Debates</h5>
+                        <h5 class="label">Panel three</h5>
                     </div>
-                    <div class="panel-content">
-                        This is a fake sentence. Enjoy.
-                    </div>
+                    <!-- <div class="panel-content">
+                        <h1>This is a fake sentence. Enjoy.</h1>
+                    </div> -->
                 </li>
                 <li id="panel2" class="panel">
                     <div id="tab2" class="tab">
-                        <h5 class="label">Market insights</h5>
+                        <h5 class="label">Panel two</h5>
                     </div>
-                    <div class="panel-content">
+                    <!-- <div class="panel-content">
                         This is a fake sentence. Enjoy.
-                    </div>
+                    </div> -->
                 </li>
                 <li id="panel1" class="panel">
                     <div id="tab1" class="tab">
-                        <h5 class="label">Frackenomics</h5>
+                        <h5 class="label">Rise of the Frack Master</h5>
                     </div>
-                    <div class="panel-content">
+                    <!-- <div class="panel-content">
                         This is a fake sentence. Enjoy.
-                    </div>
+                    </div> -->
                 </li>
             </ol>
 
@@ -338,6 +350,7 @@ googletag.enableServices();
 	
 	<script type="text/javascript"></script>
     <script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
 
 
 
