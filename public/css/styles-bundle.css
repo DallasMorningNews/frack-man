@@ -955,3 +955,12 @@ body {
   position: absolute; }
 
 /* breakeven chart */
+#chart-wrapper {
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto; }
+
+.labels {
+  color: white;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 12px; }

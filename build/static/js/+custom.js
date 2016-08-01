@@ -3,6 +3,7 @@ $(document).ready(function() {
 	//custom scripting goes here
 
 	var breakeven = [];
+	var windowWidth = $(window).width;
 
 	// Break even D3 bar graph
 
@@ -13,7 +14,7 @@ $(document).ready(function() {
 
 	function drawChart(data, targetDiv) {
 		var w = $("#chart-wrapper").width(),
-		 	h = 300;
+		 	h = 340;
 
 		var xScale = d3.scale.linear()
 						.domain([0, d3.max(data, function (d) {
@@ -23,7 +24,8 @@ $(document).ready(function() {
 
 	 	var yScale = d3.scale.ordinal()
 						.domain(d3.range(data.length))
-						.rangeRoundBands([0, h], 0.5);
+						.rangeRoundBands([0, h], 0.3);
+
 
 		var svg = d3.select(targetDiv)
 					.append("svg")
@@ -45,7 +47,8 @@ $(document).ready(function() {
 				return xScale(d.dollars);
 			})
 			.attr("height", yScale.rangeBand())
-			.attr("fill", "black");
+			.attr("fill", "#2b6188");
+
 
 		svg.selectAll("text")
 			.data(data)
@@ -55,11 +58,16 @@ $(document).ready(function() {
 				return d.name;
 			})
 			.attr("x", function(d) {
-				return xScale(0);
+				return xScale(0.5);
 			})
 			.attr("y", function(d, i) {
-				return yScale(i);
+				if (windowWidth > 650) {
+					return yScale(i) + 13;
+				} else {
+					return yScale(i);
+				}
 			})
+			.attr("fill", "white")
 			.attr("class", "labels");
 
 	}
