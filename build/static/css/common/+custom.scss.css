@@ -9,14 +9,86 @@ body {
 .hide {
   display: none; }
 
+#contentHeader {
+  margin-bottom: 120px; }
+
 header#storyHead {
   position: absolute;
   max-width: 100%;
-  top: 50px;
+  top: 100px;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
   color: white; }
+  header#storyHead h1 {
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 50px; }
+    header#storyHead h1 em {
+      font-size: 35px;
+      font-style: normal; }
+
+.shareComments, .bylineBlock, .scrollDown {
+  position: absolute;
+  max-width: 100%;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; }
+
+.shareComments {
+  top: 50px; }
+
+.bylineBlock {
+  top: 475px; }
+  .bylineBlock p {
+    color: white; }
+
+.scrollDown {
+  top: 600px; }
+  .scrollDown h3 {
+    color: white;
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 5px;
+    color: #8C722E; }
+  .scrollDown a {
+    text-decoration: none; }
+  .scrollDown .fa-arrow-circle-down {
+    color: #8C722E; }
+
+.dropcap {
+  color: #713032; }
+
+#call2Action {
+  width: 100%;
+  max-width: 650px;
+  margin: 80px auto;
+  margin-top: 40px; }
+  #call2Action h3 {
+    color: white;
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #713032;
+    font-family: "Open Sans", Arial, sans-serif;
+    cursor: pointer; }
+    #call2Action h3 .fa-arrow-circle-right {
+      color: #713032;
+      font-size: inherit; }
+
+#accordion {
+  display: none; }
+
+#accordion.fixed {
+  display: block;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2000; }
 
 #accordionWrapper ol {
   margin: 0;
@@ -26,11 +98,9 @@ header#storyHead {
 
 #accordionWrapper ol li {
   position: fixed;
-  top: 0;
   list-style-type: none;
   padding: 0;
   margin: 0;
-  height: 100%;
   width: 94%; }
 
 #panel4 {
@@ -66,7 +136,7 @@ header#storyHead {
   .tab h5 {
     transform: rotate(90deg);
     transform-origin: left top 0;
-    margin-top: 70px;
+    margin-top: 30px;
     width: 100vh;
     height: 30px;
     padding-right: 30px;
@@ -83,6 +153,11 @@ header#storyHead {
   -webkit-box-shadow: -4px 0px 10px -4px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: -4px 0px 10px -4px rgba(0, 0, 0, 0.5);
   box-shadow: -4px 0px 10px -4px rgba(0, 0, 0, 0.5); }
+
+.interactiveFooter {
+  position: absolute;
+  width: 100%;
+  z-index: 2000; }
 
 /* breakeven chart */
 #chart-wrapper {

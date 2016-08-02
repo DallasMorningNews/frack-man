@@ -10,7 +10,9 @@
 @import 'variables';
 @import 'mixins';
 
-
+$yellow: #8C722E;
+$red: #713032;
+$blue: #205173;
 
 html, body {
     width: 100%;
@@ -26,14 +28,114 @@ body {
     display: none;
 }
 
+#contentHeader {
+    margin-bottom: 120px;
+}
+
 header#storyHead {
     position: absolute;
     max-width: 100%;
-    top: 50px;
+    top: 100px;
     margin-left: auto;
     margin-right: auto;
     width: 100%;
     color: white;
+
+    h1 {
+        letter-spacing: 10px;
+        text-transform: uppercase;
+        font-weight: bold;
+        line-height: 50px;
+
+        em {
+            font-size: 35px;
+            font-style: normal;
+        }
+    }
+}
+
+.shareComments, .bylineBlock, .scrollDown {
+    position: absolute;
+    max-width: 100%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.shareComments {
+    top: 50px;
+}
+
+.bylineBlock {
+    top: 475px;
+
+    p {
+        color: white;
+    }
+}
+
+.scrollDown {
+    top: 600px;
+
+    h3 {
+        color: white;
+        font-size: 22px;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 5px;
+        color: #8C722E;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .fa-arrow-circle-down {
+        color: $yellow;
+    }
+
+}
+
+.dropcap {
+    color: $red;
+}
+
+
+
+#call2Action {
+    width: 100%;
+    max-width: 650px;
+    // text-align: center;
+    margin: 80px auto;
+    margin-top: 40px;
+
+    h3 {
+        color: white;
+        font-size: 22px;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 3px;
+        color: $red;
+        font-family: $sans;
+        cursor: pointer;
+
+        .fa-arrow-circle-right {
+            color: $red;
+            font-size: inherit;
+        }
+    }
+}
+
+#accordion {
+    display: none;
+}
+#accordion.fixed {
+    display: block;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2000;
 }
 
 #accordionWrapper ol {
@@ -45,11 +147,10 @@ header#storyHead {
 
 #accordionWrapper ol li {
     position: fixed;
-    top: 0;
     list-style-type: none;
     padding: 0;
     margin: 0;
-    height: 100%;
+    // height: 100%;
     width: 94%;
 }
 
@@ -90,7 +191,7 @@ header#storyHead {
     h5 {
         transform: rotate(90deg);
         transform-origin: left top 0;
-        margin-top: 70px;
+        margin-top: 30px;
         width: 100vh;
         height: 30px;
         padding-right: 30px;
@@ -101,7 +202,7 @@ header#storyHead {
 }
 
 #tab1 {
-    background-color: #713032;
+    background-color: $red;
     h5 {
         color: #ccc;
     }
@@ -111,6 +212,12 @@ header#storyHead {
     -webkit-box-shadow: -4px 0px 10px -4px rgba(0,0,0,0.50);
     -moz-box-shadow: -4px 0px 10px -4px rgba(0,0,0,0.50);
     box-shadow: -4px 0px 10px -4px rgba(0,0,0,0.50);
+}
+
+.interactiveFooter {
+    position: absolute;
+    width: 100%;
+    z-index: 2000;
 }
 
 /* breakeven chart */

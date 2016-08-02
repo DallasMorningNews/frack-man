@@ -94,7 +94,7 @@ $(document).ready(function() {
 		  $('#tab1, #tab2, #tab3').css("background-color", "#232322");
 		  $('#tab4').css("background-color", "#713032");
 
-		  $('#contentHeader').hide('slide', {direction: 'left'}, 850);
+		//   $('#contentHeader').hide('slide', {direction: 'left'}, 850);
      });
 
 
@@ -109,12 +109,12 @@ $(document).ready(function() {
 		  $('#tab1, #tab2, #tab4').css("background-color", "#232322");
 		  $('#tab3').css("background-color", "#713032");
 
-		  $('#contentHeader').hide('slide', {direction: 'left'}, 850);
+		//   $('#contentHeader').hide('slide', {direction: 'left'}, 850);
      });
 
 
      /* Panel click pushes other panels out of way */
-     $('#panel2').on('click', function(){
+     $('#call2Action, #panel2').on('click', function(){
 
 		 $('#panel2').animate({"left":"2%"}, 800);
 		 $('#panel3').animate({"left":"96%"}, 775);
@@ -123,7 +123,7 @@ $(document).ready(function() {
 		 $('#tab1, #tab3, #tab4').css("background-color", "#232322");
 		 $('#tab2').css("background-color", "#713032");
 
-		 $('#contentHeader').hide('slide', {direction: 'left'}, 822);
+		 $('#story-container1').hide('slide', {direction: 'left'}, 822);
 
      });
 
@@ -141,6 +141,30 @@ $(document).ready(function() {
      });
 
 
+	 $(window).scroll(function() {
+	     var distanceFromTop = $(this).scrollTop();
+	     if (distanceFromTop >= $('#contentHeader').height()) {
+	         $('#accordion').fadeIn("slow").addClass('fixed');
+	     } else {
+	         $('#accordion').fadeOut("slow").removeClass('fixed');
+	     }
+	 });
+
+
+	 $(function() {
+	  $('a[href*="#"]:not([href="#"])').click(function() {
+	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+	      var target = $(this.hash);
+	      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+	      if (target.length) {
+	        $('html, body').animate({
+	          scrollTop: target.offset().top
+	        }, 1000);
+	        return false;
+	      }
+	    }
+	  });
+	});
 
 	// injecting current year into footer
 	// DO NOT DELETE
