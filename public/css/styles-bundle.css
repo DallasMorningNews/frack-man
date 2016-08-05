@@ -936,7 +936,9 @@ header#storyHead {
     color: #8C722E; }
 
 .dropcap {
-  color: #713032; }
+  color: #713032;
+  margin-top: 3px;
+  margin-bottom: -3px; }
 
 #call2Action {
   width: 100%;
@@ -956,84 +958,39 @@ header#storyHead {
       color: #713032;
       font-size: inherit; }
 
-#accordion {
+#nav {
   display: none; }
 
-#accordion.fixed {
+#nav.fixed {
   display: block;
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 2000; }
+  z-index: 1000; }
 
-#accordionWrapper ol {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  overflow: hidden; }
-
-#accordionWrapper ol li {
-  position: fixed;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  width: 94%; }
-
-#panel4 {
-  z-index: 101;
-  left: 97%; }
-
-#panel3 {
-  z-index: 100;
-  left: 94%; }
-
-#panel2 {
-  z-index: 50;
-  left: 91%; }
-
-#panel1 {
-  z-index: 1; }
-
-.tab {
-  position: absolute;
-  z-index: 1000;
-  width: 90px;
-  min-width: 90px;
-  height: 100vh;
-  display: inline-block;
-  background: #232322;
-  margin-top: 0px;
-  padding-bottom: 0px;
-  border-left: 2px solid #2d2d2b;
-  -webkit-box-shadow: 5px 0px 15px -4px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 5px 0px 15px -4px rgba(0, 0, 0, 0.75);
-  box-shadow: 4px 0px 15px -4px rgba(0, 0, 0, 0.75);
-  cursor: pointer; }
-  .tab h5 {
-    transform: rotate(90deg);
-    transform-origin: left top 0;
-    margin-top: 30px;
-    width: 100vh;
-    height: 30px;
-    padding-right: 30px;
-    margin-left: 30px;
-    font-size: 18px;
-    color: #ccc; }
-
-#tab1 {
-  background-color: #713032; }
-  #tab1 h5 {
-    color: #ccc; }
-
-.panel {
-  -webkit-box-shadow: -4px 0px 10px -4px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: -4px 0px 10px -4px rgba(0, 0, 0, 0.5);
-  box-shadow: -4px 0px 10px -4px rgba(0, 0, 0, 0.5); }
-
-.interactiveFooter {
-  position: absolute;
+.nav-bar {
+  height: 75px;
   width: 100%;
-  z-index: 2000; }
+  background-color: #713032;
+  text-align: center; }
+  .nav-bar ul {
+    width: 100%;
+    margin: 0 auto; }
+    .nav-bar ul li {
+      display: inline-block;
+      margin-right: 35px;
+      cursor: pointer;
+      padding: 0 20px; }
+      .nav-bar ul li h4 {
+        font-size: 15px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        padding-top: 22px;
+        color: white; }
+
+.active {
+  background-color: #333333;
+  height: 90px; }
 
 /* breakeven chart */
 #chart-wrapper {

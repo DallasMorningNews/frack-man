@@ -99,6 +99,8 @@ header#storyHead {
 
 .dropcap {
     color: $red;
+    margin-top: 3px;
+    margin-bottom: -3px;
 }
 
 
@@ -127,97 +129,49 @@ header#storyHead {
     }
 }
 
-#accordion {
+#nav {
     display: none;
 }
-#accordion.fixed {
+
+#nav.fixed {
     display: block;
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 2000;
-}
-
-#accordionWrapper ol {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    overflow: hidden;
-}
-
-#accordionWrapper ol li {
-    position: fixed;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    // height: 100%;
-    width: 94%;
-}
-
-#panel4 {
-    z-index: 101;
-    left: 97%;
-}
-
-#panel3 {
-    z-index: 100;
-    left: 94%;
-}
-
-#panel2 {
-    z-index: 50;
-    left: 91%;
-}
-
-#panel1 {
-    z-index: 1;
-}
-
-.tab {
-    position: absolute;
     z-index: 1000;
-    width: 90px;
-    min-width: 90px;
-    height: 100vh;
-    display: inline-block;
-    background: #232322;
-    margin-top: 0px;
-    padding-bottom: 0px;
-    border-left: 2px solid #2d2d2b;
-    -webkit-box-shadow: 5px 0px 15px -4px rgba(0,0,0,0.75);
-    -moz-box-shadow: 5px 0px 15px -4px rgba(0,0,0,0.75);
-    box-shadow: 4px 0px 15px -4px rgba(0,0,0,0.75);
-    cursor: pointer;
-    h5 {
-        transform: rotate(90deg);
-        transform-origin: left top 0;
-        margin-top: 30px;
-        width: 100vh;
-        height: 30px;
-        padding-right: 30px;
-        margin-left: 30px;
-        font-size: 18px;
-        color: #ccc;
-    }
 }
 
-#tab1 {
-    background-color: $red;
-    h5 {
-        color: #ccc;
-    }
-}
-
-.panel {
-    -webkit-box-shadow: -4px 0px 10px -4px rgba(0,0,0,0.50);
-    -moz-box-shadow: -4px 0px 10px -4px rgba(0,0,0,0.50);
-    box-shadow: -4px 0px 10px -4px rgba(0,0,0,0.50);
-}
-
-.interactiveFooter {
-    position: absolute;
+.nav-bar {
+    height: 75px;
     width: 100%;
-    z-index: 2000;
+    background-color: $red;
+    text-align: center;
+
+    ul {
+        width: 100%;
+        margin: 0 auto;
+
+        li {
+            display: inline-block;
+            margin-right: 35px;
+            cursor: pointer;
+            padding: 0 20px;
+
+            h4 {
+                font-size: 15px;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                padding-top: 22px;
+                color: white;
+            }
+        }
+    }
+
+}
+
+.active {
+    background-color: $chartCopy;
+    height: 90px;
 }
 
 /* breakeven chart */

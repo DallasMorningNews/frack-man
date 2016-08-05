@@ -2,8 +2,11 @@ $(document).ready(function() {
 
 	//custom scripting goes here
 
+	var stories = [];
+
 	var breakeven = [];
 	var windowWidth = $(window).width;
+
 
 	// Break even D3 bar graph
 
@@ -83,79 +86,136 @@ $(document).ready(function() {
 
 	});
 
+	$(window).scroll(function() {
+		var distanceFromTop = $(this).scrollTop();
+		if (distanceFromTop >= $('#contentHeader').height()) {
+			$('#nav').fadeIn().addClass('fixed');
+		} else {
+			$('#nav').fadeOut(0).removeClass('fixed');
+		}
+	});
 
-	// horizontal accordion
-	$('#panel4').on('click', function(){
+	$(window).scroll(function() {
+		stories = [];
+		$.each($(".story"), function () {
+			console.log($(this).offset().top);
+			if ($(this).offset().top < $(window).scrollTop() + ($(window).height() / 2)) {
+				stories.push($(this));
+			}
+		});
+		var target = stories.length - 1;
+		console.log(target);
+		$("li").removeClass("active");
+		$("li").eq(target).addClass("active");
+	});
 
-		  $('#panel2').animate({"left":"2%"}, 750);
- 		  $('#panel3').animate({"left":"4%"}, 775);
-		  $('#panel4').animate({"left":"6%"}, 800);
+	$('#tab1').on('click', function(){
 
-		  $('#tab1, #tab2, #tab3').css("background-color", "#232322");
-		  $('#tab4').css("background-color", "#713032");
+		  $('#tab2, #tab3, #tab4').css("background-color", "#713032").removeClass("active");
+		  $(this).css("background-color", "#232322").addClass("active");
 
-		//   $('#contentHeader').hide('slide', {direction: 'left'}, 850);
+		//   $('#story1').show();
+		//   $('#story2, #story3, #story4').hide();
      });
 
+	 $('#tab2').on('click', function(){
 
+		   $('#tab1, #tab3, #tab4').css("background-color", "#713032").removeClass("active");
+		   $(this).css("background-color", "#232322").addClass("active");
 
-	// horizontal accordion
-	$('#panel3').on('click', function(){
-
-		  $('#panel2').animate({"left":"2%"}, 750);
- 		  $('#panel3').animate({"left":"4%"}, 775);
-		  $('#panel4').animate({"left":"98%"}, 800);
-
-		  $('#tab1, #tab2, #tab4').css("background-color", "#232322");
-		  $('#tab3').css("background-color", "#713032");
-
-		//   $('#contentHeader').hide('slide', {direction: 'left'}, 850);
-     });
-
-
-     /* Panel click pushes other panels out of way */
-     $('#call2Action, #panel2').on('click', function(){
-
-		 $('#panel2').animate({"left":"2%"}, 800);
-		 $('#panel3').animate({"left":"96%"}, 775);
-		 $('#panel4').animate({"left":"98%"}, 800);
-
-		 $('#tab1, #tab3, #tab4').css("background-color", "#232322");
-		 $('#tab2').css("background-color", "#713032");
-
-		 $('#story-container1').hide('slide', {direction: 'left'}, 822);
-
-     });
-
-     /* Panel 1 click pushes other panels out of way */
-     $('#panel1').on('click', function(){
-
-         $('#panel2').animate({"left":"94%"}, 700);
-         $('#panel3').animate({"left":"96%"}, 750);
-		 $('#panel4').animate({"left":"98%"}, 800);
-
-		 $('#tab2, #tab3, #tab4').css("background-color", "#232322");
-		 $('#tab1').css("background-color", "#713032");
-
-		 $('#contentHeader').show('slide', {direction: 'left'}, 595);
-     });
-
-
-	 $(window).scroll(function() {
-	     var distanceFromTop = $(this).scrollTop();
-	     if (distanceFromTop >= $('#contentHeader').height()) {
-	         $('#accordion').fadeIn("slow").addClass('fixed');
-	     } else {
-	         $('#accordion').fadeOut("slow").removeClass('fixed');
-	     }
+		//    $('#story2').show();
+		//    $('#story1, #story3, #story4').hide();
 	 });
+
+	 $('#tab3').on('click', function(){
+
+		   $('#tab1, #tab2, #tab4').css("background-color", "#713032").removeClass("active");
+		   $(this).css("background-color", "#232322").addClass("active");
+
+		//    $('#story3').show();
+		//    $('#story1, #story2, #story4').hide();
+	 });
+
+	 $('#tab4').on('click', function(){
+
+		   $('#tab1, #tab2, #tab3').css("background-color", "#713032").removeClass("active");
+		   $(this).css("background-color", "#232322").addClass("active");
+
+		//    $('#story4').show();
+		//    $('#story1, #story2, #story3').hide();
+	 });
+
+
+
+	$(function() {
+		$("#story2").lazyload();
+	});
+
+	// // horizontal accordion
+	// $('#panel4').on('click', function(){
+	//
+	// 	  $('#panel2').animate({"left":"2%"}, 750);
+ // 		  $('#panel3').animate({"left":"4%"}, 775);
+	// 	  $('#panel4').animate({"left":"6%"}, 800);
+	//
+	// 	  $('#tab1, #tab2, #tab3').css("background-color", "#232322");
+	// 	  $('#tab4').css("background-color", "#713032");
+	//
+	// 	//   $('#contentHeader').hide('slide', {direction: 'left'}, 850);
+    //  });
+	//
+	//
+	//
+	// // horizontal accordion
+	// $('#panel3').on('click', function(){
+	//
+	// 	  $('#panel2').animate({"left":"2%"}, 750);
+ // 		  $('#panel3').animate({"left":"4%"}, 775);
+	// 	  $('#panel4').animate({"left":"98%"}, 800);
+	//
+	// 	  $('#tab1, #tab2, #tab4').css("background-color", "#232322");
+	// 	  $('#tab3').css("background-color", "#713032");
+	//
+	// 	//   $('#contentHeader').hide('slide', {direction: 'left'}, 850);
+    //  });
+	//
+	//
+    //  /* Panel click pushes other panels out of way */
+    //  $('#call2Action, #panel2').on('click', function(){
+	//
+	// 	 $('#panel2').animate({"left":"2%"}, 800);
+	// 	 $('#panel3').animate({"left":"96%"}, 775);
+	// 	 $('#panel4').animate({"left":"98%"}, 800);
+	//
+	// 	 $('#tab1, #tab3, #tab4').css("background-color", "#232322");
+	// 	 $('#tab2').css("background-color", "#713032");
+	//
+	// 	 $('#story-container1').hide('slide', {direction: 'left'}, 822);
+	//
+    //  });
+	//
+    //  /* Panel 1 click pushes other panels out of way */
+    //  $('#panel1').on('click', function(){
+	//
+    //      $('#panel2').animate({"left":"94%"}, 700);
+    //      $('#panel3').animate({"left":"96%"}, 750);
+	// 	 $('#panel4').animate({"left":"98%"}, 800);
+	//
+	// 	 $('#tab2, #tab3, #tab4').css("background-color", "#232322");
+	// 	 $('#tab1').css("background-color", "#713032");
+	//
+	// 	 $('#contentHeader').show('slide', {direction: 'left'}, 595);
+    //  });
+
+
+
 
 
 	 $(function() {
 	  $('a[href*="#"]:not([href="#"])').click(function() {
 	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
 	      var target = $(this.hash);
-	      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+	      target = (target.length + 100) ? target : $('[name=' + this.hash.slice(1) +']');
 	      if (target.length) {
 	        $('html, body').animate({
 	          scrollTop: target.offset().top
