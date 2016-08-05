@@ -12,11 +12,11 @@ $(document).ready(function() {
 
 	$.getJSON("js/data.json", function(data) {
 		breakeven = data;
-		drawChart(breakeven, "#chart-wrapper");
+		drawChart(breakeven, "#permian-chart");
 	});
 
 	function drawChart(data, targetDiv) {
-		var w = $("#chart-wrapper").width(),
+		var w = $("#permian-chart").width(),
 		 	h = 340;
 
 		var xScale = d3.scale.linear()
@@ -79,9 +79,9 @@ $(document).ready(function() {
 	$(window).resize(function() {
 
 		setTimeout(function(){
-			chartWidth = $("#chart-wrapper").width();
+			chartWidth = $("#permian-chart").width();
 			$("#chart").remove();
-			drawChart(breakeven, "#chart-wrapper");
+			drawChart(breakeven, "#permian-chart");
 		}, 250);
 
 	});
@@ -118,102 +118,6 @@ console.log(stories);
 		$(".nav-bar ul li").removeClass("active");
 		$(".nav-bar ul li").eq(target).addClass("active");
 	});
-
-	$('#tab1').on('click', function(){
-
-		  $('#tab2, #tab3, #tab4').removeClass("active");
-
-		//   $('#story1').show();
-		//   $('#story2, #story3, #story4').hide();
-     });
-
-	 $('#tab2').on('click', function(){
-
-		   $('#tab1, #tab3, #tab4').removeClass("active");
-
-		//    $('#story2').show();
-		//    $('#story1, #story3, #story4').hide();
-	 });
-
-	 $('#tab3').on('click', function(){
-
-		   $('#tab1, #tab2, #tab4').removeClass("active");
-
-		//    $('#story3').show();
-		//    $('#story1, #story2, #story4').hide();
-	 });
-
-	 $('#tab4').on('click', function(){
-
-		   $('#tab1, #tab2, #tab3').removeClass("active");
-
-		//    $('#story4').show();
-		//    $('#story1, #story2, #story3').hide();
-	 });
-
-
-
-	// $(function() {
-	// 	$("#story2").lazyload();
-	// });
-
-	// // horizontal accordion
-	// $('#panel4').on('click', function(){
-	//
-	// 	  $('#panel2').animate({"left":"2%"}, 750);
- // 		  $('#panel3').animate({"left":"4%"}, 775);
-	// 	  $('#panel4').animate({"left":"6%"}, 800);
-	//
-	// 	  $('#tab1, #tab2, #tab3').css("background-color", "#232322");
-	// 	  $('#tab4').css("background-color", "#713032");
-	//
-	// 	//   $('#contentHeader').hide('slide', {direction: 'left'}, 850);
-    //  });
-	//
-	//
-	//
-	// // horizontal accordion
-	// $('#panel3').on('click', function(){
-	//
-	// 	  $('#panel2').animate({"left":"2%"}, 750);
- // 		  $('#panel3').animate({"left":"4%"}, 775);
-	// 	  $('#panel4').animate({"left":"98%"}, 800);
-	//
-	// 	  $('#tab1, #tab2, #tab4').css("background-color", "#232322");
-	// 	  $('#tab3').css("background-color", "#713032");
-	//
-	// 	//   $('#contentHeader').hide('slide', {direction: 'left'}, 850);
-    //  });
-	//
-	//
-    //  /* Panel click pushes other panels out of way */
-    //  $('#call2Action, #panel2').on('click', function(){
-	//
-	// 	 $('#panel2').animate({"left":"2%"}, 800);
-	// 	 $('#panel3').animate({"left":"96%"}, 775);
-	// 	 $('#panel4').animate({"left":"98%"}, 800);
-	//
-	// 	 $('#tab1, #tab3, #tab4').css("background-color", "#232322");
-	// 	 $('#tab2').css("background-color", "#713032");
-	//
-	// 	 $('#story-container1').hide('slide', {direction: 'left'}, 822);
-	//
-    //  });
-	//
-    //  /* Panel 1 click pushes other panels out of way */
-    //  $('#panel1').on('click', function(){
-	//
-    //      $('#panel2').animate({"left":"94%"}, 700);
-    //      $('#panel3').animate({"left":"96%"}, 750);
-	// 	 $('#panel4').animate({"left":"98%"}, 800);
-	//
-	// 	 $('#tab2, #tab3, #tab4').css("background-color", "#232322");
-	// 	 $('#tab1').css("background-color", "#713032");
-	//
-	// 	 $('#contentHeader').show('slide', {direction: 'left'}, 595);
-    //  });
-
-
 
 
 

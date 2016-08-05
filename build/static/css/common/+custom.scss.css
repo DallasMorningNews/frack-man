@@ -95,7 +95,7 @@ header#storyHead {
 .nav-bar {
   height: 75px;
   width: 100%;
-  background-color: #713032;
+  background-color: #222;
   text-align: center; }
   .nav-bar ul {
     width: 100%;
@@ -113,14 +113,34 @@ header#storyHead {
         color: white; }
 
 .active {
-  background-color: #333333;
+  background-color: #713032;
   height: 90px;
   -webkit-box-shadow: 0px 7px 5px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 7px 5px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.75); }
 
+.story {
+  margin-bottom: 200px; }
+  .story h2 {
+    max-width: 650px;
+    margin: 0 auto;
+    font-size: 30px;
+    font-family: "Open Sans", Arial, sans-serif;
+    font-weight: bold;
+    line-height: 32px;
+    color: #713032;
+    margin-bottom: 20px; }
+
 /* breakeven chart */
-#chart-wrapper {
+.chart-wrapper {
+  margin: 90px auto; }
+  .chart-wrapper h5 {
+    margin: auto auto;
+    max-width: 650px;
+    font-family: "Open Sans", Arial, sans-serif;
+    font-weight: bold; }
+
+#permian-chart {
   max-width: 650px;
   margin-left: auto;
   margin-right: auto; }
