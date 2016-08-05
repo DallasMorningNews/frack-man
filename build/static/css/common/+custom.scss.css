@@ -131,6 +131,19 @@ header#storyHead {
     color: #713032;
     margin-bottom: 20px; }
 
+.divider {
+  height: 100vh;
+  width: 100%;
+  background-color: #222; }
+  .divider h1 {
+    color: #713032;
+    text-align: center;
+    padding-top: calc(100vh / 2.5);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 35px;
+    text-shadow: 1px 1px 5px black; }
+
 /* breakeven chart */
 .chart-wrapper {
   margin: 90px auto; }
