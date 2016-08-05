@@ -976,12 +976,12 @@ header#storyHead {
   .nav-bar ul {
     width: 100%;
     margin: 0 auto; }
-    .nav-bar ul li {
+    .nav-bar ul a li {
       display: inline-block;
       margin-right: 35px;
       cursor: pointer;
       padding: 0 20px; }
-      .nav-bar ul li h4 {
+      .nav-bar ul a li h4 {
         font-size: 15px;
         text-transform: uppercase;
         letter-spacing: 2px;
@@ -990,7 +990,10 @@ header#storyHead {
 
 .active {
   background-color: #333333;
-  height: 90px; }
+  height: 90px;
+  -webkit-box-shadow: 0px 7px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 7px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.75); }
 
 /* breakeven chart */
 #chart-wrapper {

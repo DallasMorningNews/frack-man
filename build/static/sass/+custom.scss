@@ -151,18 +151,22 @@ header#storyHead {
         width: 100%;
         margin: 0 auto;
 
-        li {
-            display: inline-block;
-            margin-right: 35px;
-            cursor: pointer;
-            padding: 0 20px;
+        a {
+            
 
-            h4 {
-                font-size: 15px;
-                text-transform: uppercase;
-                letter-spacing: 2px;
-                padding-top: 22px;
-                color: white;
+            li {
+                display: inline-block;
+                margin-right: 35px;
+                cursor: pointer;
+                padding: 0 20px;
+
+                h4 {
+                    font-size: 15px;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    padding-top: 22px;
+                    color: white;
+                }
             }
         }
     }
@@ -172,6 +176,9 @@ header#storyHead {
 .active {
     background-color: $chartCopy;
     height: 90px;
+    -webkit-box-shadow: 0px 7px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 7px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.75);
 }
 
 /* breakeven chart */

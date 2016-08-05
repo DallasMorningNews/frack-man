@@ -86,6 +86,17 @@ $(document).ready(function() {
 
 	});
 
+	// $(window).scroll(function() {
+	// 	var distanceFromTop = $(this).scrollTop();
+	// 	if (distanceFromTop >= $('#contentHeader').height()) {
+	// 		$('#nav').fadeIn().addClass('fixed');
+	// 	} else {
+	// 		$('#nav').fadeOut(0).removeClass('fixed');
+	// 	}
+	// });
+
+console.log(stories);
+
 	$(window).scroll(function() {
 		var distanceFromTop = $(this).scrollTop();
 		if (distanceFromTop >= $('#contentHeader').height()) {
@@ -93,26 +104,24 @@ $(document).ready(function() {
 		} else {
 			$('#nav').fadeOut(0).removeClass('fixed');
 		}
-	});
 
-	$(window).scroll(function() {
 		stories = [];
-		$.each($(".story"), function () {
-			console.log($(this).offset().top);
-			if ($(this).offset().top < $(window).scrollTop() + ($(window).height() / 2)) {
+		$.each($(".story"), function() {
+
+			if ($(this).offset().top < $(window).scrollTop() + ($(window).height() / 4)) {
 				stories.push($(this));
 			}
+
 		});
 		var target = stories.length - 1;
 		console.log(target);
-		$("li").removeClass("active");
-		$("li").eq(target).addClass("active");
+		$(".nav-bar ul li").removeClass("active");
+		$(".nav-bar ul li").eq(target).addClass("active");
 	});
 
 	$('#tab1').on('click', function(){
 
-		  $('#tab2, #tab3, #tab4').css("background-color", "#713032").removeClass("active");
-		  $(this).css("background-color", "#232322").addClass("active");
+		  $('#tab2, #tab3, #tab4').removeClass("active");
 
 		//   $('#story1').show();
 		//   $('#story2, #story3, #story4').hide();
@@ -120,8 +129,7 @@ $(document).ready(function() {
 
 	 $('#tab2').on('click', function(){
 
-		   $('#tab1, #tab3, #tab4').css("background-color", "#713032").removeClass("active");
-		   $(this).css("background-color", "#232322").addClass("active");
+		   $('#tab1, #tab3, #tab4').removeClass("active");
 
 		//    $('#story2').show();
 		//    $('#story1, #story3, #story4').hide();
@@ -129,8 +137,7 @@ $(document).ready(function() {
 
 	 $('#tab3').on('click', function(){
 
-		   $('#tab1, #tab2, #tab4').css("background-color", "#713032").removeClass("active");
-		   $(this).css("background-color", "#232322").addClass("active");
+		   $('#tab1, #tab2, #tab4').removeClass("active");
 
 		//    $('#story3').show();
 		//    $('#story1, #story2, #story4').hide();
@@ -138,8 +145,7 @@ $(document).ready(function() {
 
 	 $('#tab4').on('click', function(){
 
-		   $('#tab1, #tab2, #tab3').css("background-color", "#713032").removeClass("active");
-		   $(this).css("background-color", "#232322").addClass("active");
+		   $('#tab1, #tab2, #tab3').removeClass("active");
 
 		//    $('#story4').show();
 		//    $('#story1, #story2, #story3').hide();
@@ -147,9 +153,9 @@ $(document).ready(function() {
 
 
 
-	$(function() {
-		$("#story2").lazyload();
-	});
+	// $(function() {
+	// 	$("#story2").lazyload();
+	// });
 
 	// // horizontal accordion
 	// $('#panel4').on('click', function(){
