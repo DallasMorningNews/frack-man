@@ -886,43 +886,90 @@ body {
   display: none; }
 
 #contentHeader {
-  margin-bottom: 120px; }
-
-header#storyHead {
-  position: absolute;
-  max-width: 100%;
-  top: 100px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-  color: white; }
-  header#storyHead h1 {
-    letter-spacing: 10px;
-    text-transform: uppercase;
-    font-weight: bold;
-    line-height: 50px; }
-    header#storyHead h1 em {
-      font-size: 35px;
-      font-style: normal; }
-
-.shareComments, .bylineBlock, .scrollDown {
-  position: absolute;
-  max-width: 100%;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center; }
-
-.shareComments {
-  top: 50px; }
-
-.bylineBlock {
-  top: 475px; }
-  .bylineBlock p {
+  margin-bottom: 150px; }
+  @media only screen and (max-width: 1065px) {
+    #contentHeader {
+      display: none; } }
+  #contentHeader .shareComments, #contentHeader .bylineBlock, #contentHeader .scrollDown {
+    position: absolute;
+    max-width: 100%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; }
+  #contentHeader .shareComments {
+    top: 50px; }
+    @media only screen and (max-width: 1480px) {
+      #contentHeader .shareComments {
+        top: 25px; } }
+    @media only screen and (max-width: 1365px) {
+      #contentHeader .shareComments {
+        top: 0px; } }
+  #contentHeader header#storyHead {
+    position: absolute;
+    max-width: 100%;
+    top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
     color: white; }
+    @media only screen and (max-width: 1480px) {
+      #contentHeader header#storyHead {
+        top: 75px; } }
+    @media only screen and (max-width: 1365px) {
+      #contentHeader header#storyHead {
+        top: 50px; } }
+    @media only screen and (max-width: 1065px) {
+      #contentHeader header#storyHead {
+        display: none; } }
+    #contentHeader header#storyHead h1 {
+      letter-spacing: 10px;
+      text-transform: uppercase;
+      font-weight: bold;
+      line-height: 50px; }
+      @media only screen and (max-width: 1365px) {
+        #contentHeader header#storyHead h1 {
+          font-size: 42px;
+          line-height: 40px; } }
+      #contentHeader header#storyHead h1 em {
+        font-size: 35px;
+        font-style: normal; }
+        @media only screen and (max-width: 1365px) {
+          #contentHeader header#storyHead h1 em {
+            font-size: 25px; } }
+    @media only screen and (max-width: 1365px) {
+      #contentHeader header#storyHead h2 {
+        font-size: 25px;
+        line-height: 34px; } }
+  #contentHeader .bylineBlock {
+    top: 475px; }
+    @media only screen and (max-width: 1480px) {
+      #contentHeader .bylineBlock {
+        top: 450px; } }
+    @media only screen and (max-width: 1365px) {
+      #contentHeader .bylineBlock {
+        top: 375px; } }
+    @media only screen and (max-width: 1065px) {
+      #contentHeader .bylineBlock {
+        display: none; } }
+    #contentHeader .bylineBlock p {
+      color: white; }
+
+@media only screen and (max-width: 1065px) {
+  .shareComments {
+    display: none; } }
 
 .scrollDown {
   top: 600px; }
+  @media only screen and (max-width: 1480px) {
+    .scrollDown {
+      top: 550px; } }
+  @media only screen and (max-width: 1365px) {
+    .scrollDown {
+      top: 450px; } }
+  @media only screen and (max-width: 1065px) {
+    .scrollDown {
+      display: none; } }
   .scrollDown h3 {
     color: white;
     font-size: 22px;
@@ -930,33 +977,39 @@ header#storyHead {
     font-weight: bold;
     letter-spacing: 5px;
     color: #8C722E; }
+    @media only screen and (max-width: 1365px) {
+      .scrollDown h3 {
+        font-size: 15px;
+        letter-spacing: 3px; } }
   .scrollDown a {
     text-decoration: none; }
   .scrollDown .fa-arrow-circle-down {
     color: #8C722E; }
+  @media only screen and (max-width: 1365px) {
+    .scrollDown .down-desk {
+      display: none; } }
+  .scrollDown .down-mob {
+    margin-top: -30px; }
+    @media only screen and (min-width: 1365px) {
+      .scrollDown .down-mob {
+        display: none; } }
+
+.story {
+  margin-bottom: 150px; }
+  @media only screen and (min-width: 1065px) {
+    .story header#storyHead {
+      display: none; } }
+  @media only screen and (min-width: 1065px) {
+    .story .bylineBlock {
+      display: none; } }
+  @media only screen and (min-width: 1065px) {
+    .story .shareComments {
+      display: none; } }
 
 .dropcap {
   color: #713032;
   margin-top: 3px;
   margin-bottom: -3px; }
-
-#call2Action {
-  width: 100%;
-  max-width: 650px;
-  margin: 80px auto;
-  margin-top: 40px; }
-  #call2Action h3 {
-    color: white;
-    font-size: 22px;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 3px;
-    color: #713032;
-    font-family: "Open Sans", Arial, sans-serif;
-    cursor: pointer; }
-    #call2Action h3 .fa-arrow-circle-right {
-      color: #713032;
-      font-size: inherit; }
 
 #nav {
   display: none; }
@@ -976,17 +1029,25 @@ header#storyHead {
   .nav-bar ul {
     width: 100%;
     margin: 0 auto; }
-    .nav-bar ul a li {
-      display: inline-block;
-      margin-right: 35px;
-      cursor: pointer;
-      padding: 0 20px; }
-      .nav-bar ul a li h4 {
-        font-size: 15px;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        padding-top: 22px;
-        color: white; }
+    .nav-bar ul a {
+      text-decoration: none; }
+      .nav-bar ul a li {
+        display: inline-block;
+        margin-right: 35px;
+        cursor: pointer;
+        padding: 0 20px; }
+        @media only screen and (max-width: 1237px) {
+          .nav-bar ul a li {
+            margin-right: 10px; } }
+        .nav-bar ul a li h4 {
+          font-size: 15px;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          padding-top: 22px;
+          color: white; }
+          @media only screen and (max-width: 1237px) {
+            .nav-bar ul a li h4 {
+              letter-spacing: 0px; } }
 
 .active {
   background-color: #713032;
@@ -995,47 +1056,174 @@ header#storyHead {
   -moz-box-shadow: 0px 7px 5px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.75); }
 
-.story {
-  margin-bottom: 200px; }
-  .story h2 {
-    max-width: 650px;
-    margin: 0 auto;
-    font-size: 30px;
-    font-family: "Open Sans", Arial, sans-serif;
-    font-weight: bold;
-    line-height: 32px;
-    color: #713032;
-    margin-bottom: 20px; }
-
 .divider {
   height: 100vh;
   width: 100%;
-  background-color: #222; }
+  background-color: #222;
+  margin-bottom: 150px;
+  text-align: center;
+  position: relative; }
+  .divider hr {
+    margin-top: 40px;
+    max-width: 200px;
+    border-color: #444;
+    border-width: 1px; }
   .divider h1 {
+    color: #ccc;
+    font-size: 55px;
+    text-shadow: 1px 1px 5px black;
+    font-weight: bold; }
+    @media only screen and (max-width: 1065px) {
+      .divider h1 {
+        font-size: 35px;
+        line-height: 40px;
+        padding-left: 10px;
+        padding-right: 10px; } }
+  .divider h3 {
     color: #713032;
-    text-align: center;
-    padding-top: calc(100vh / 2.5);
     text-transform: uppercase;
-    letter-spacing: 3px;
-    font-size: 35px;
-    text-shadow: 1px 1px 5px black; }
+    text-shadow: 1px 1px 5px black;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 3px; }
+    @media only screen and (max-width: 1065px) {
+      .divider h3 {
+        font-size: 20px;
+        line-height: 37px;
+        padding-left: 10px;
+        padding-right: 10px; } }
+  .divider h4 {
+    padding-top: 40px;
+    font-size: 40px;
+    max-width: 900px;
+    line-height: 60px;
+    color: #444;
+    font-family: Merriweather, Georgia, serif;
+    margin-left: auto;
+    margin-right: auto; }
+    @media only screen and (max-width: 1065px) {
+      .divider h4 {
+        font-size: 18px;
+        line-height: 26px;
+        padding-left: 10px;
+        padding-right: 10px; } }
+  .divider h5 {
+    font-style: italic;
+    padding-top: 20px;
+    font-size: px;
+    max-width: 700px;
+    color: #444;
+    font-family: Merriweather, Georgia, serif;
+    margin-left: auto;
+    margin-right: auto; }
+    @media only screen and (max-width: 1065px) {
+      .divider h5 {
+        font-size: 15px;
+        line-height: 22px;
+        padding-left: 10px;
+        padding-right: 10px; } }
+
+.divider-text {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%); }
+
+p.lede {
+  font-family: Open Sans;
+  font-weight: bold;
+  color: #713032;
+  font-size: 25px;
+  line-height: 35px; }
+
+.videoBlock h6 {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: bold;
+  margin-bottom: 20px; }
+
+.headshot {
+  height: 150px;
+  width: 150px;
+  background-image: url("../images/_chrisfaulkner.jpg");
+  background-size: 75%;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  float: left;
+  margin-left: -15px;
+  margin-bottom: 10px; }
+
+.factBox h5 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  background-color: #713032;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 18px;
+  letter-spacing: 2px; }
+
+.factBox h6 {
+  font-family: "Open Sans", Arial, sans-serif; }
 
 /* breakeven chart */
 .chart-wrapper {
   margin: 90px auto; }
+  .chart-wrapper hr {
+    margin-bottom: 30px;
+    max-width: 650px;
+    border-color: #ccc; }
+  .chart-wrapper ul {
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px; }
+    .chart-wrapper ul li {
+      display: inline-block;
+      margin-left: 10px; }
+    .chart-wrapper ul .permian-key {
+      width: 10px;
+      height: 10px;
+      background: #713032;
+      display: inline-block;
+      margin-left: -10px; }
+    .chart-wrapper ul .bakken-key {
+      width: 10px;
+      height: 10px;
+      background: #205173;
+      display: inline-block; }
   .chart-wrapper h5 {
     margin: auto auto;
     max-width: 650px;
     font-family: "Open Sans", Arial, sans-serif;
-    font-weight: bold; }
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: .6rem; }
+  .chart-wrapper p {
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    font-family: "Open Sans", Arial, sans-serif; }
 
 #permian-chart {
   max-width: 650px;
   margin-left: auto;
   margin-right: auto; }
 
+.permian-bar {
+  fill: #713032; }
+
+.bakken-bar {
+  fill: #205173; }
+
 .labels {
-  color: white;
+  fill: #333333;
   font-family: "Open Sans", Arial, sans-serif;
   font-size: 12px;
-  padding-left: 50px; }
+  font-weight: bold;
+  display: inline-block; }

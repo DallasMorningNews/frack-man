@@ -1,54 +1,82 @@
 [
   {
     "name": "Northern Midland - Lower Spraberry",
-    "dollars": 27.17
+    "dollars": 27.17,
+    "shell": "permian"
   },
   {
     "name": "Western Glasscock-Lower Spraberry",
-    "dollars": 28.82
+    "dollars": 28.82,
+    "shell": "permian"
   },
   {
     "name": "Western Glasscock-Wolfcamp A&B",
-    "dollars": 29.4
+    "dollars": 29.4,
+    "shell": "permian"
   },
   {
     "name": "Northern Midland-Wolfcamp A&B",
-    "dollars": 29.6
+    "dollars": 29.6,
+    "shell": "permian"
   },
   {
     "name": "Delaware Basin-Reeves Wolfcamp A",
-    "dollars": 32.86
+    "dollars": 32.86,
+    "shell": "permian"
   },
   {
     "name": "Delware Basin-Loving Wolfcamp A",
-    "dollars": 35.41
+    "dollars": 35.41,
+    "shell": "permian"
   },
   {
     "name": "Southern Midland-So Fairway-Wolfcamp",
-    "dollars": 37
+    "dollars": 37,
+    "shell": "permian"
   },
   {
     "name": "Northern Midland-Wolfcamp A&B",
-    "dollars": 37.54
+    "dollars": 37.54,
+    "shell": "permian"
   },
   {
     "name": "Delware Basin-NIM Bone Spring",
-    "dollars": 38.1
+    "dollars": 38.1,
+    "shell": "permian"
   },
   {
     "name": "Delware Basin-NIM Wolfcamp",
-    "dollars": 43.06
+    "dollars": 43.06,
+    "shell": "permian"
   },
   {
     "name": "Delaware Basin-TX Bone Spring",
-    "dollars": 44.5
+    "dollars": 44.5,
+    "shell": "permian"
   },
   {
     "name": "Delware Basin-Avalon/Leonard",
-    "dollars": 44.74
+    "dollars": 44.74,
+    "shell": "permian"
   },
   {
     "name": "Southern Midland-Ozona-Wolfcamp A&B",
-    "dollars": 58.7
+    "dollars": 58.7,
+    "shell": "permian"
+  },
+  {
+    "name": "Bakken-Core",
+    "dollars": 35.79,
+    "shell": "Bakken"
+  },
+  {
+    "name": "Bakken-non core",
+    "dollars": 53.87,
+    "shell": "Bakken"
+  },
+  {
+    "name": "Bakken-Three Forks",
+    "dollars": 41.80,
+    "shell": "Bakken"
   }
 ]

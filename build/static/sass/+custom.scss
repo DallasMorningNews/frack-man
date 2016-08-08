@@ -30,55 +30,132 @@ body {
     display: none;
 }
 
+
+
+
+// illustration & headline/dek/byline/etc
+
 #contentHeader {
-    margin-bottom: 120px;
-}
+    margin-bottom: 150px;
 
-header#storyHead {
-    position: absolute;
-    max-width: 100%;
-    top: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    color: white;
+    @media only screen and (max-width: 1065px) {
+        display: none;
+    }
 
-    h1 {
-        letter-spacing: 10px;
-        text-transform: uppercase;
-        font-weight: bold;
-        line-height: 50px;
+    .shareComments, .bylineBlock, .scrollDown {
+        position: absolute;
+        max-width: 100%;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
 
-        em {
-            font-size: 35px;
-            font-style: normal;
+    .shareComments {
+        top: 50px;
+
+        @media only screen and (max-width: 1480px) {
+            top: 25px;
+        }
+
+        @media only screen and (max-width: 1365px) {
+            top: 0px;
+        }
+    }
+
+    header#storyHead {
+        position: absolute;
+        max-width: 100%;
+        top: 100px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        color: white;
+
+        @media only screen and (max-width: 1480px) {
+            top: 75px;
+        }
+
+        @media only screen and (max-width: 1365px) {
+            top: 50px;
+        }
+
+        @media only screen and (max-width: 1065px) {
+            display: none;
+        }
+
+        h1 {
+            letter-spacing: 10px;
+            text-transform: uppercase;
+            font-weight: bold;
+            line-height: 50px;
+
+            @media only screen and (max-width: 1365px) {
+                font-size: 42px;
+                line-height: 40px;
+            }
+
+            em {
+                font-size: 35px;
+                font-style: normal;
+
+                @media only screen and (max-width: 1365px) {
+                    font-size: 25px;
+                }
+            }
+        }
+
+        h2 {
+            @media only screen and (max-width: 1365px) {
+                font-size: 25px;
+                line-height: 34px;
+            }
+        }
+    }
+
+    .bylineBlock {
+        top: 475px;
+
+        @media only screen and (max-width: 1480px) {
+            top: 450px;
+        }
+
+        @media only screen and (max-width: 1365px) {
+            top: 375px;
+        }
+
+        @media only screen and (max-width: 1065px) {
+            display: none;
+        }
+
+        p {
+            color: white;
         }
     }
 }
 
-.shareComments, .bylineBlock, .scrollDown {
-    position: absolute;
-    max-width: 100%;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}
 
 .shareComments {
-    top: 50px;
-}
-
-.bylineBlock {
-    top: 475px;
-
-    p {
-        color: white;
+    @media only screen and (max-width: 1065px) {
+        display: none;
     }
 }
 
+
 .scrollDown {
     top: 600px;
+
+    @media only screen and (max-width: 1480px) {
+        top: 550px;
+    }
+
+    @media only screen and (max-width: 1365px) {
+        top: 450px;
+    }
+
+    @media only screen and (max-width: 1065px) {
+        display: none;
+    }
 
     h3 {
         color: white;
@@ -87,6 +164,11 @@ header#storyHead {
         font-weight: bold;
         letter-spacing: 5px;
         color: #8C722E;
+
+        @media only screen and (max-width: 1365px) {
+            font-size: 15px;
+            letter-spacing: 3px;
+        }
     }
 
     a {
@@ -97,7 +179,52 @@ header#storyHead {
         color: $yellow;
     }
 
+    .down-desk {
+        @media only screen and (max-width: 1365px) {
+            display: none;
+        }
+    }
+
+    .down-mob {
+        margin-top: -30px;
+
+        @media only screen and (min-width: 1365px) {
+            display: none;
+        }
+    }
+
 }
+
+
+
+
+
+
+
+// content after illustraton
+
+.story {
+    margin-bottom: 150px;
+
+    header#storyHead {
+        @media only screen and (min-width: 1065px) {
+            display: none;
+        }
+    }
+
+    .bylineBlock {
+        @media only screen and (min-width: 1065px) {
+            display: none;
+        }
+    }
+
+    .shareComments {
+        @media only screen and (min-width: 1065px) {
+            display: none;
+        }
+    }
+}
+
 
 .dropcap {
     color: $red;
@@ -107,29 +234,10 @@ header#storyHead {
 
 
 
-#call2Action {
-    width: 100%;
-    max-width: 650px;
-    // text-align: center;
-    margin: 80px auto;
-    margin-top: 40px;
 
-    h3 {
-        color: white;
-        font-size: 22px;
-        text-transform: uppercase;
-        font-weight: bold;
-        letter-spacing: 3px;
-        color: $red;
-        font-family: $sans;
-        cursor: pointer;
 
-        .fa-arrow-circle-right {
-            color: $red;
-            font-size: inherit;
-        }
-    }
-}
+
+// navbar styles
 
 #nav {
     display: none;
@@ -154,7 +262,7 @@ header#storyHead {
         margin: 0 auto;
 
         a {
-
+            text-decoration: none;
 
             li {
                 display: inline-block;
@@ -162,19 +270,27 @@ header#storyHead {
                 cursor: pointer;
                 padding: 0 20px;
 
+                @media only screen
+                  and (max-width: 1237px) {
+                      margin-right: 10px;
+                  }
+
                 h4 {
                     font-size: 15px;
                     text-transform: uppercase;
                     letter-spacing: 2px;
                     padding-top: 22px;
                     color: white;
+
+                    @media only screen
+                      and (max-width: 1237px) {
+                          letter-spacing: 0px;
+                      }
                 }
             }
         }
     }
-
 }
-
 
 .active {
     background-color: $red;
@@ -184,35 +300,153 @@ header#storyHead {
     box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.75);
 }
 
-.story {
-    margin-bottom: 200px;
 
-    h2 {
-        max-width: 650px;
-        margin: 0 auto;
-        font-size: 30px;
-        font-family: $sans;
-        // text-transform: uppercase;
-        font-weight: bold;
-        line-height: 32px;
-        color: $red;
-        margin-bottom: 20px;
-    }
-}
+
+
+// divider styles
 
 .divider {
     height: 100vh;
     width: 100%;
     background-color: #222;
+    margin-bottom: 150px;
+    text-align: center;
+    position: relative;
+
+    hr {
+        margin-top: 40px;
+        max-width: 200px;
+        border-color: #444;
+        border-width: 1px;
+    }
 
     h1 {
-        color: $red;
-        text-align: center;
-        padding-top: calc(100vh / 2.5);
-        text-transform: uppercase;
-        letter-spacing: 3px;
-        font-size: 35px;
+        color: #ccc;
+        // text-transform: uppercase;
+        font-size: 55px;
         text-shadow: 1px 1px 5px black;
+        font-weight: bold;
+
+        @media only screen and (max-width: 1065px) {
+            font-size: 35px;
+            line-height: 40px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+
+    h3 {
+        color: $red;
+        text-transform: uppercase;
+        text-shadow: 1px 1px 5px black;
+        font-size: 30px;
+        font-weight: bold;
+        letter-spacing: 3px;
+
+        @media only screen and (max-width: 1065px) {
+            font-size: 20px;
+            line-height: 37px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+    h4 {
+        padding-top: 40px;
+        font-size: 40px;
+        max-width: 900px;
+        line-height: 60px;
+        color: #444;
+        font-family: $serif;
+        margin-left: auto;
+        margin-right: auto;
+
+        @media only screen and (max-width: 1065px) {
+            font-size: 18px;
+            line-height: 26px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+    h5 {
+        font-style: italic;
+        padding-top: 20px;
+        font-size: px;
+        max-width: 700px;
+        color: #444;
+        font-family: $serif;
+        margin-left: auto;
+        margin-right: auto;
+
+        @media only screen and (max-width: 1065px) {
+            font-size: 15px;
+            line-height: 22px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+}
+
+.divider-text {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+
+
+
+
+// body copy styles
+
+p.lede {
+    font-family: Open Sans;
+    font-weight: bold;
+    color: #713032;
+    font-size: 25px;
+    line-height: 35px;
+}
+
+.videoBlock {
+    h6 {
+        font-family: $sans;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+}
+
+.headshot {
+    height: 150px;
+    width: 150px;
+    background-image: url("../images/_chrisfaulkner.jpg");
+    background-size: 75%;
+    background-repeat: no-repeat;
+    // border-radius: 50%;
+    background-position: center;
+    display: inline-block;
+    float: left;
+    margin-left: -15px;
+    margin-bottom: 10px;
+}
+
+.factBox {
+    h5 {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        background-color: $red;
+        color: lighten(#ccc, 20%);
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 18px;
+        letter-spacing: 2px;
+    }
+
+    h6 {
+        font-family: $sans;
     }
 }
 
@@ -221,13 +455,58 @@ header#storyHead {
 .chart-wrapper {
     margin: 90px auto;
 
+    hr {
+        margin-bottom: 30px;
+        max-width: 650px;
+        border-color: #ccc;
+    }
+
+    ul {
+        max-width: 650px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+
+        li {
+            display: inline-block;
+            margin-left: 10px;
+        }
+
+        .permian-key {
+            width: 10px;
+            height: 10px;
+            background: $red;
+            display: inline-block;
+            margin-left: -10px;
+        }
+
+        .bakken-key {
+            width: 10px;
+            height: 10px;
+            background: $blue;
+            display: inline-block;
+        }
+    }
+
     h5 {
         margin: auto auto;
         max-width: 650px;
         font-family: $sans;
         font-weight: bold;
+        color: $chartCopy;
+        margin-bottom: .6rem;
+    }
+    p {
+        max-width: 650px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        font-family: $sans;
+
     }
 }
+
 
 #permian-chart {
     max-width: 650px;
@@ -235,9 +514,18 @@ header#storyHead {
     margin-right: auto;
 }
 
+.permian-bar {
+    fill: $red;
+}
+
+.bakken-bar {
+    fill: $blue;
+}
+
 .labels {
-    color: white;
+    fill : $chartCopy;
     font-family: $sans;
     font-size: 12px;
-    padding-left: 50px;
+    font-weight: bold;
+    display: inline-block;
 }

@@ -5,7 +5,9 @@ $(document).ready(function() {
 	var stories = [];
 
 	var breakeven = [];
-	var windowWidth = $(window).width;
+	var windowWidth = $(window).width();
+
+	var format = d3.format("$,.2f");
 
 
 	// Break even D3 bar graph
@@ -17,7 +19,7 @@ $(document).ready(function() {
 
 	function drawChart(data, targetDiv) {
 		var w = $("#permian-chart").width(),
-		 	h = 340;
+		 	h = 750;
 
 		var xScale = d3.scale.linear()
 						.domain([0, d3.max(data, function (d) {
@@ -27,7 +29,7 @@ $(document).ready(function() {
 
 	 	var yScale = d3.scale.ordinal()
 						.domain(d3.range(data.length))
-						.rangeRoundBands([0, h], 0.3);
+						.rangeRoundBands([0, h], 0.6);
 
 
 		var svg = d3.select(targetDiv)
@@ -44,13 +46,19 @@ $(document).ready(function() {
 				return xScale(0);
 			})
 			.attr("y", function(d, i) {
-				return yScale(i);
+				return yScale(i) + 3;
 			})
 			.attr("width", function(d) {
 				return xScale(d.dollars);
 			})
 			.attr("height", yScale.rangeBand())
-			.attr("fill", "#2b6188");
+			.attr("class", function(d) {
+				if (d.shell === "permian") {
+					return "permian-bar";
+				} else {
+					return "bakken-bar";
+				}
+			});
 
 
 		svg.selectAll("text")
@@ -58,19 +66,21 @@ $(document).ready(function() {
 			.enter()
 			.append("text")
 			.text(function(d) {
-				return d.name;
+				return d.name + " | " + format(d.dollars);
 			})
 			.attr("x", function(d) {
 				return xScale(0.5);
 			})
+			// .attr("y", function(d, i) {
+			// 	if (windowWidth > 650) {
+			// 		return yScale(i) + 17;
+			// 	} else {
+			// 		return yScale(i);
+			// 	}
+			// })
 			.attr("y", function(d, i) {
-				if (windowWidth > 650) {
-					return yScale(i) + 13;
-				} else {
-					return yScale(i);
-				}
+				return yScale(i);
 			})
-			.attr("fill", "white")
 			.attr("class", "labels");
 
 	}
@@ -135,6 +145,27 @@ console.log(stories);
 	    }
 	  });
 	});
+
+
+	var $videoWrapper = '';
+
+    if ($('.ndn_embed')) {
+        $videoWrapper = $('.ndn_embed');
+        scaleVideo();
+    }
+
+        function scaleVideo() {
+
+            videoWidth = $videoWrapper.width(); //grabs the width of the video player
+            videoHeight = videoWidth * 0.5625; //sets a variable equal to 56.25% of the width (the correct aspect ratio for the videos)
+
+            $videoWrapper.css('height', videoHeight); //assings that height variable as the player's height in the css
+        }
+
+
+    $(window).resize(function() {
+        scaleVideo(); //runs the video aspect resizer when the width of the browser is changed
+    });
 
 	// injecting current year into footer
 	// DO NOT DELETE
