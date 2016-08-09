@@ -9,6 +9,10 @@ $(document).ready(function() {
 
 	var format = d3.format("$,.2f");
 
+	var counter = 0;
+
+	var sectionHeads = ["#story1", "#section2", "#section3", "#section4"];
+
 
 	// Break even D3 bar graph
 
@@ -105,7 +109,6 @@ $(document).ready(function() {
 	// 	}
 	// });
 
-console.log(stories);
 
 	$(window).scroll(function() {
 		var distanceFromTop = $(this).scrollTop();
@@ -124,9 +127,62 @@ console.log(stories);
 
 		});
 		var target = stories.length - 1;
-		console.log(target);
+		counter = target;
+
 		$(".nav-bar ul li").removeClass("active");
 		$(".nav-bar ul li").eq(target).addClass("active");
+
+		if (counter === 0) {
+			$('.fa-chevron-left').hide();
+		} else if (counter === sectionHeads.length - 1) {
+			$('.fa-chevron-right').hide();
+		} else {
+			$('.fa-chevron-left, .fa-chevron-right').show();
+		}
+
+	});
+
+	$('.fa-chevron-left').click(function() {
+		if (counter > 0) {
+			counter --;
+			$('html, body').animate({
+				scrollTop: $(sectionHeads[counter]).offset().top
+			}, 2000);
+		}
+	});
+
+	$('.fa-chevron-right').click(function() {
+		if (counter < sectionHeads.length - 1) {
+			counter ++;
+			$('html, body').animate({
+				scrollTop: $(sectionHeads[counter]).offset().top
+			}, 2000);
+		}
+	});
+
+
+    $('.fa-chevron-circle-down').click(function() {
+        if (windowWidth < 950) {
+			$('.nav-bar').find('.nav-bar-expand').slideToggle();
+		}
+		// $('.nav-bar-expand').show();
+    });
+
+	// $('.nav-bar-expand').click(function() {
+	// 	$('nav-bar-expand').hide();
+	// });
+
+
+
+
+	$(window).resize(function() {
+
+		setTimeout(function(){
+			chartWidth = $("#permian-chart").width();
+			$("#chart").remove();
+			drawChart(breakeven, "#permian-chart");
+		}, 250);
+
 	});
 
 

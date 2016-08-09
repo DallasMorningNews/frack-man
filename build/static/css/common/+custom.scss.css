@@ -14,21 +14,14 @@ body {
   @media only screen and (max-width: 1065px) {
     #contentHeader {
       display: none; } }
-  #contentHeader .shareComments, #contentHeader .bylineBlock, #contentHeader .scrollDown {
-    position: absolute;
-    max-width: 100%;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center; }
-  #contentHeader .shareComments {
-    top: 50px; }
-    @media only screen and (max-width: 1480px) {
-      #contentHeader .shareComments {
-        top: 25px; } }
-    @media only screen and (max-width: 1365px) {
-      #contentHeader .shareComments {
-        top: 0px; } }
+  @media only screen and (min-width: 950px) {
+    #contentHeader .shareComments, #contentHeader .bylineBlock, #contentHeader .scrollDown {
+      position: absolute;
+      max-width: 100%;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center; } }
   #contentHeader header#storyHead {
     position: absolute;
     max-width: 100%;
@@ -79,10 +72,6 @@ body {
     #contentHeader .bylineBlock p {
       color: white; }
 
-@media only screen and (max-width: 1065px) {
-  .shareComments {
-    display: none; } }
-
 .scrollDown {
   top: 600px; }
   @media only screen and (max-width: 1480px) {
@@ -118,6 +107,25 @@ body {
       .scrollDown .down-mob {
         display: none; } }
 
+.shareComments {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  right: 0; }
+  @media only screen and (max-width: 1480px) {
+    .shareComments {
+      top: 25px; } }
+  @media only screen and (max-width: 1365px) {
+    .shareComments {
+      position: absolute;
+      top: 0px;
+      left: 0;
+      right: 0; } }
+  @media only screen and (max-width: 975px) {
+    .shareComments {
+      position: static;
+      margin-bottom: 0px; } }
+
 .story {
   margin-bottom: 150px; }
   @media only screen and (min-width: 1065px) {
@@ -125,9 +133,6 @@ body {
       display: none; } }
   @media only screen and (min-width: 1065px) {
     .story .bylineBlock {
-      display: none; } }
-  @media only screen and (min-width: 1065px) {
-    .story .shareComments {
       display: none; } }
 
 .dropcap {
@@ -149,7 +154,40 @@ body {
   height: 75px;
   width: 100%;
   background-color: #222;
-  text-align: center; }
+  text-align: center;
+  position: relative; }
+  .nav-bar .fa-chevron-left, .nav-bar .fa-chevron-right {
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 45px;
+    padding-bottom: 35px; }
+    @media only screen and (min-width: 975px) {
+      .nav-bar .fa-chevron-left, .nav-bar .fa-chevron-right {
+        display: none; } }
+  .nav-bar .fa-chevron-right {
+    left: auto;
+    right: 0; }
+  .nav-bar .fa-chevron-circle-down {
+    position: absolute;
+    bottom: 0px;
+    color: white;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+    cursor: pointer;
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-top: 50px;
+    padding-bottom: 2px; }
+    @media only screen and (min-width: 975px) {
+      .nav-bar .fa-chevron-circle-down {
+        display: none; } }
   .nav-bar ul {
     width: 100%;
     margin: 0 auto; }
@@ -157,12 +195,13 @@ body {
       text-decoration: none; }
       .nav-bar ul a li {
         display: inline-block;
-        margin-right: 35px;
         cursor: pointer;
         padding: 0 20px; }
-        @media only screen and (max-width: 1237px) {
+        @media only screen and (max-width: 975px) {
           .nav-bar ul a li {
-            margin-right: 10px; } }
+            display: none; }
+            .nav-bar ul a li.active {
+              display: block; } }
         .nav-bar ul a li h4 {
           font-size: 15px;
           text-transform: uppercase;
@@ -172,6 +211,17 @@ body {
           @media only screen and (max-width: 1237px) {
             .nav-bar ul a li h4 {
               letter-spacing: 0px; } }
+
+.nav-bar-expand {
+  display: none; }
+  @media only screen and (max-width: 975px) {
+    .nav-bar-expand {
+      height: 100vh;
+      background-color: #222;
+      color: white; }
+      .nav-bar-expand ul a li {
+        display: block;
+        color: white; } }
 
 .active {
   background-color: #713032;

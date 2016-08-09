@@ -43,25 +43,16 @@ body {
     }
 
     .shareComments, .bylineBlock, .scrollDown {
-        position: absolute;
-        max-width: 100%;
-        width: 100%;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
+
+        @media only screen and (min-width: 950px) {
+            position: absolute;
+            max-width: 100%;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;        }
     }
 
-    .shareComments {
-        top: 50px;
-
-        @media only screen and (max-width: 1480px) {
-            top: 25px;
-        }
-
-        @media only screen and (max-width: 1365px) {
-            top: 0px;
-        }
-    }
 
     header#storyHead {
         position: absolute;
@@ -135,13 +126,6 @@ body {
 }
 
 
-.shareComments {
-    @media only screen and (max-width: 1065px) {
-        display: none;
-    }
-}
-
-
 .scrollDown {
     top: 600px;
 
@@ -196,9 +180,29 @@ body {
 }
 
 
+.shareComments {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
 
+    @media only screen and (max-width: 1480px) {
+        top: 25px;
+    }
 
+    @media only screen and (max-width: 1365px) {
+        position: absolute;
+        top: 0px;
+        left: 0;
+        right: 0;
+    }
 
+    @media only screen and (max-width: 975px) {
+        position: static;
+        margin-bottom: 0px;
+    }
+
+}
 
 
 // content after illustraton
@@ -218,11 +222,6 @@ body {
         }
     }
 
-    .shareComments {
-        @media only screen and (min-width: 1065px) {
-            display: none;
-        }
-    }
 }
 
 
@@ -256,6 +255,47 @@ body {
     width: 100%;
     background-color: #222;
     text-align: center;
+    position: relative;
+
+    .fa-chevron-left, .fa-chevron-right {
+        color: lighten(#ccc, 20%);
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 45px;
+        padding-bottom: 35px;
+
+        @media only screen and (min-width: 975px) {
+              display: none;
+        }
+    }
+
+    .fa-chevron-right {
+        left: auto;
+        right: 0;
+    }
+
+    .fa-chevron-circle-down {
+        position: absolute;
+        bottom: 0px;
+        color: white;
+        right: 0;
+        left: 0;
+        z-index: 1000;
+        cursor: pointer;
+        padding-right: 50px;
+        padding-left: 50px;
+        padding-top: 50px;
+        padding-bottom: 2px;
+
+        @media only screen and (min-width: 975px) {
+              display: none;
+        }
+    }
 
     ul {
         width: 100%;
@@ -266,14 +306,15 @@ body {
 
             li {
                 display: inline-block;
-                margin-right: 35px;
                 cursor: pointer;
                 padding: 0 20px;
 
-                @media only screen
-                  and (max-width: 1237px) {
-                      margin-right: 10px;
-                  }
+                @media only screen and (max-width: 975px) {
+                      display: none;
+                      &.active {
+                          display: block;
+                      }
+                }
 
                 h4 {
                     font-size: 15px;
@@ -282,14 +323,32 @@ body {
                     padding-top: 22px;
                     color: white;
 
-                    @media only screen
-                      and (max-width: 1237px) {
+                    @media only screen and (max-width: 1237px) {
                           letter-spacing: 0px;
                       }
                 }
             }
         }
     }
+}
+
+
+.nav-bar-expand {
+    display: none;
+
+    @media only screen and (max-width: 975px) {
+        height: 100vh;
+        background-color: #222;
+        color: white;
+
+        ul a li {
+                  display: block;
+                  color: white;
+        }
+    }
+
+
+
 }
 
 .active {
