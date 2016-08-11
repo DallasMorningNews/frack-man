@@ -1,15 +1,15 @@
 {
   "id": "33572390816",
-  "name": "frack-man",
+  "name": "frack-master",
   "pageTitle": "<Title>",
   "shareTitle": "<Title>",
   "shareText": "<Text>",
   "tweetText": "<Text>",
   "publishYear": 2016,
-  "publishDate": "2016-7-22T00:00:00Z",
-  "url": "http://interactives.dallasnews.com/2016/frack-man/",
-  "authors": "<Authors - comma-separated, lowercase>",
-  "desk": "<Desk>",
+  "publishDate": "2016-8-11T11:00:00Z",
+  "url": "http://interactives.dallasnews.com/2016/frack-master/",
+  "authors": "dalton laferney",
+  "desk": "business",
   "section": "<Section>",
   "keywords": [
     "interactives",
@@ -18,11 +18,19 @@
     "dfw news",
     "dallas newspaper",
     "dallas morning news",
-    "dallas morning news newspaper"
+    "dallas morning news newspaper",
+    "chris faulkner",
+    "faulkner",
+    "fracking",
+    "free media",
+    "oil",
+    "derrick",
+    "southwest energy exploration",
+    "breitling energy"
   ],
-  "imgURL": "http://interactives.dallasnews.com/2016/frack-man/undefined",
-  "imgWidth": "<Width - w/out \"px\">",
-  "imgHeight": "<Height - w/out \"px\">",
-  "sectionTwitter": "<handle - w/out \"@\">",
-  "authorTwitter": "<handle - w/out \"@\">"
+  "imgURL": "http://interactives.dallasnews.com/2016/frack-master/images/_share.jpg",
+  "imgWidth": "1200",
+  "imgHeight": "630",
+  "sectionTwitter": "@DMNBiz",
+  "authorTwitter": "@daltonlaferney"
 }

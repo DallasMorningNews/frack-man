@@ -9,68 +9,75 @@ body {
 .hide {
   display: none; }
 
-#contentHeader {
-  margin-bottom: 150px; }
+#contentHeader img.header-desk {
+  margin-bottom: 130px; }
   @media only screen and (max-width: 1065px) {
-    #contentHeader {
+    #contentHeader img.header-desk {
       display: none; } }
-  @media only screen and (min-width: 950px) {
-    #contentHeader .shareComments, #contentHeader .bylineBlock, #contentHeader .scrollDown {
-      position: absolute;
-      max-width: 100%;
-      width: 100%;
-      margin-left: auto;
-      margin-right: auto;
-      text-align: center; } }
-  #contentHeader header#storyHead {
+
+@media only screen and (min-width: 1065px) {
+  #contentHeader img.header-mob {
+    display: none; } }
+
+@media only screen and (min-width: 1065px) {
+  #contentHeader .shareComments, #contentHeader .bylineBlock, #contentHeader .scrollDown {
     position: absolute;
     max-width: 100%;
-    top: 100px;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
-    width: 100%;
-    color: white; }
-    @media only screen and (max-width: 1480px) {
-      #contentHeader header#storyHead {
-        top: 75px; } }
+    text-align: center; } }
+
+#contentHeader header#storyHead {
+  position: absolute;
+  max-width: 100%;
+  top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  color: white; }
+  @media only screen and (max-width: 1480px) {
+    #contentHeader header#storyHead {
+      top: 75px; } }
+  @media only screen and (max-width: 1365px) {
+    #contentHeader header#storyHead {
+      top: 50px; } }
+  @media only screen and (max-width: 1065px) {
+    #contentHeader header#storyHead {
+      display: none; } }
+  #contentHeader header#storyHead h1 {
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 50px; }
     @media only screen and (max-width: 1365px) {
-      #contentHeader header#storyHead {
-        top: 50px; } }
-    @media only screen and (max-width: 1065px) {
-      #contentHeader header#storyHead {
-        display: none; } }
-    #contentHeader header#storyHead h1 {
-      letter-spacing: 10px;
-      text-transform: uppercase;
-      font-weight: bold;
-      line-height: 50px; }
+      #contentHeader header#storyHead h1 {
+        font-size: 42px;
+        line-height: 40px; } }
+    #contentHeader header#storyHead h1 em {
+      font-size: 35px;
+      font-style: normal; }
       @media only screen and (max-width: 1365px) {
-        #contentHeader header#storyHead h1 {
-          font-size: 42px;
-          line-height: 40px; } }
-      #contentHeader header#storyHead h1 em {
-        font-size: 35px;
-        font-style: normal; }
-        @media only screen and (max-width: 1365px) {
-          #contentHeader header#storyHead h1 em {
-            font-size: 25px; } }
-    @media only screen and (max-width: 1365px) {
-      #contentHeader header#storyHead h2 {
-        font-size: 25px;
-        line-height: 34px; } }
-  #contentHeader .bylineBlock {
-    top: 475px; }
-    @media only screen and (max-width: 1480px) {
-      #contentHeader .bylineBlock {
-        top: 450px; } }
-    @media only screen and (max-width: 1365px) {
-      #contentHeader .bylineBlock {
-        top: 375px; } }
-    @media only screen and (max-width: 1065px) {
-      #contentHeader .bylineBlock {
-        display: none; } }
-    #contentHeader .bylineBlock p {
-      color: white; }
+        #contentHeader header#storyHead h1 em {
+          font-size: 25px; } }
+  @media only screen and (max-width: 1365px) {
+    #contentHeader header#storyHead h2 {
+      font-size: 25px;
+      line-height: 34px; } }
+
+#contentHeader .bylineBlock {
+  top: 475px; }
+  @media only screen and (max-width: 1480px) {
+    #contentHeader .bylineBlock {
+      top: 450px; } }
+  @media only screen and (max-width: 1365px) {
+    #contentHeader .bylineBlock {
+      top: 375px; } }
+  @media only screen and (max-width: 1065px) {
+    #contentHeader .bylineBlock {
+      display: none; } }
+  #contentHeader .bylineBlock p {
+    color: white; }
 
 .scrollDown {
   top: 600px; }
@@ -107,27 +114,33 @@ body {
       .scrollDown .down-mob {
         display: none; } }
 
-.shareComments {
+.bylineBlock {
+  margin-bottom: 40px; }
+
+#share-mobile .shareComments {
   position: absolute;
   top: 50px;
   left: 0;
   right: 0; }
   @media only screen and (max-width: 1480px) {
-    .shareComments {
+    #share-mobile .shareComments {
       top: 25px; } }
   @media only screen and (max-width: 1365px) {
-    .shareComments {
+    #share-mobile .shareComments {
       position: absolute;
       top: 0px;
       left: 0;
       right: 0; } }
-  @media only screen and (max-width: 975px) {
-    .shareComments {
+  @media only screen and (max-width: 1065px) {
+    #share-mobile .shareComments {
       position: static;
       margin-bottom: 0px; } }
 
 .story {
   margin-bottom: 150px; }
+  @media only screen and (max-width: 700px) {
+    .story {
+      margin-bottom: 100px; } }
   @media only screen and (min-width: 1065px) {
     .story header#storyHead {
       display: none; } }
@@ -138,7 +151,8 @@ body {
 .dropcap {
   color: #713032;
   margin-top: 3px;
-  margin-bottom: -3px; }
+  padding-top: 6px;
+  margin-bottom: -4px; }
 
 #nav {
   display: none; }
@@ -160,6 +174,7 @@ body {
     color: white;
     cursor: pointer;
     position: absolute;
+    z-index: 2000;
     top: 50%;
     left: 0;
     transform: translateY(-50%);
@@ -169,7 +184,7 @@ body {
     padding-bottom: 35px; }
     @media only screen and (min-width: 975px) {
       .nav-bar .fa-chevron-left, .nav-bar .fa-chevron-right {
-        display: none; } }
+        top: 43%; } }
   .nav-bar .fa-chevron-right {
     left: auto;
     right: 0; }
@@ -217,11 +232,23 @@ body {
   @media only screen and (max-width: 975px) {
     .nav-bar-expand {
       height: 100vh;
-      background-color: #222;
-      color: white; }
-      .nav-bar-expand ul a li {
-        display: block;
-        color: white; } }
+      background-color: #222; }
+      .nav-bar-expand ul {
+        padding-top: 20px; }
+        .nav-bar-expand ul a li {
+          display: block; }
+          .nav-bar-expand ul a li h4 {
+            color: #888; }
+      .nav-bar-expand .fa-times-circle {
+        position: absolute;
+        color: #888;
+        right: 0;
+        left: 0;
+        cursor: pointer;
+        top: 380px; } }
+    @media only screen and (max-width: 975px) and (min-width: 975px) {
+      .nav-bar-expand .fa-times-circle {
+        display: none; } }
 
 .active {
   background-color: #713032;
@@ -237,65 +264,93 @@ body {
   margin-bottom: 150px;
   text-align: center;
   position: relative; }
+  @media only screen and (max-width: 700px) {
+    .divider {
+      margin-bottom: 100px; } }
   .divider hr {
     margin-top: 40px;
     max-width: 200px;
-    border-color: #444;
+    border-color: #555;
     border-width: 1px; }
+    @media only screen and (max-width: 700px) {
+      .divider hr {
+        margin-top: 30px; } }
   .divider h1 {
     color: #ccc;
     font-size: 55px;
     text-shadow: 1px 1px 5px black;
-    font-weight: bold; }
-    @media only screen and (max-width: 1065px) {
+    font-weight: bold;
+    padding-left: 15px;
+    padding-right: 15px; }
+    @media only screen and (max-width: 1300px) {
       .divider h1 {
         font-size: 35px;
-        line-height: 40px;
-        padding-left: 10px;
-        padding-right: 10px; } }
+        line-height: 40px; } }
+    @media only screen and (max-width: 700px) {
+      .divider h1 {
+        font-size: 25px;
+        line-height: 30px; } }
   .divider h3 {
     color: #713032;
     text-transform: uppercase;
     text-shadow: 1px 1px 5px black;
     font-size: 30px;
     font-weight: bold;
-    letter-spacing: 3px; }
-    @media only screen and (max-width: 1065px) {
+    letter-spacing: 3px;
+    padding-left: 15px;
+    padding-right: 15px; }
+    @media only screen and (max-width: 1300px) {
       .divider h3 {
-        font-size: 20px;
-        line-height: 37px;
-        padding-left: 10px;
-        padding-right: 10px; } }
+        font-size: 25px;
+        line-height: 37px; } }
+    @media only screen and (max-width: 700px) {
+      .divider h3 {
+        font-size: 18px;
+        line-height: 37px; } }
   .divider h4 {
     padding-top: 40px;
     font-size: 40px;
     max-width: 900px;
     line-height: 60px;
-    color: #444;
+    color: #555;
     font-family: Merriweather, Georgia, serif;
     margin-left: auto;
-    margin-right: auto; }
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px; }
+    @media only screen and (max-width: 1300px) {
+      .divider h4 {
+        font-size: 22px;
+        line-height: 26px; } }
     @media only screen and (max-width: 1065px) {
+      .divider h4 {
+        font-size: 25px;
+        line-height: 35px; } }
+    @media only screen and (max-width: 700px) {
       .divider h4 {
         font-size: 18px;
         line-height: 26px;
-        padding-left: 10px;
-        padding-right: 10px; } }
+        padding-top: 30px; } }
   .divider h5 {
     font-style: italic;
     padding-top: 20px;
     font-size: px;
     max-width: 700px;
-    color: #444;
+    color: #555;
     font-family: Merriweather, Georgia, serif;
     margin-left: auto;
-    margin-right: auto; }
-    @media only screen and (max-width: 1065px) {
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px; }
+    @media only screen and (max-width: 1300px) {
+      .divider h5 {
+        font-size: 20px;
+        line-height: 22px; } }
+    @media only screen and (max-width: 700px) {
       .divider h5 {
         font-size: 15px;
         line-height: 22px;
-        padding-left: 10px;
-        padding-right: 10px; } }
+        padding-top: 10px; } }
 
 .divider-text {
   position: absolute;
@@ -312,10 +367,14 @@ p.lede {
   font-size: 25px;
   line-height: 35px; }
 
-.videoBlock h6 {
-  font-family: "Open Sans", Arial, sans-serif;
-  font-weight: bold;
-  margin-bottom: 20px; }
+.videoBlock {
+  padding-top: 20px;
+  border-top: 1px solid #ccc; }
+  .videoBlock h6 {
+    font-family: "Open Sans", Arial, sans-serif;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 14px; }
 
 .headshot {
   height: 150px;
@@ -345,11 +404,12 @@ p.lede {
 
 /* breakeven chart */
 .chart-wrapper {
-  margin: 90px auto; }
-  .chart-wrapper hr {
-    margin-bottom: 30px;
-    max-width: 650px;
-    border-color: #ccc; }
+  margin: 90px auto;
+  max-width: 650px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc; }
   .chart-wrapper ul {
     max-width: 650px;
     margin-left: auto;
@@ -384,7 +444,7 @@ p.lede {
     line-height: 1.8rem;
     font-family: "Open Sans", Arial, sans-serif; }
 
-#permian-chart {
+#permian-chart, #media-chart {
   max-width: 650px;
   margin-left: auto;
   margin-right: auto; }
@@ -401,3 +461,15 @@ p.lede {
   font-size: 12px;
   font-weight: bold;
   display: inline-block; }
+
+.years {
+  fill: #333333;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 14px;
+  display: inline-block;
+  text-align: center; }
+
+.totals {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 15px; }

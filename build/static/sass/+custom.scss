@@ -36,15 +36,23 @@ body {
 // illustration & headline/dek/byline/etc
 
 #contentHeader {
-    margin-bottom: 150px;
 
-    @media only screen and (max-width: 1065px) {
-        display: none;
+    img.header-desk {
+        margin-bottom: 130px;
+        @media only screen and (max-width: 1065px) {
+            display: none;
+        }
+    }
+
+    img.header-mob {
+        @media only screen and (min-width: 1065px) {
+            display: none;
+        }
     }
 
     .shareComments, .bylineBlock, .scrollDown {
 
-        @media only screen and (min-width: 950px) {
+        @media only screen and (min-width: 1065px) {
             position: absolute;
             max-width: 100%;
             width: 100%;
@@ -125,7 +133,6 @@ body {
     }
 }
 
-
 .scrollDown {
     top: 600px;
 
@@ -179,36 +186,46 @@ body {
 
 }
 
+.bylineBlock {
+    margin-bottom: 40px;
+}
 
-.shareComments {
-    position: absolute;
-    top: 50px;
-    left: 0;
-    right: 0;
-
-    @media only screen and (max-width: 1480px) {
-        top: 25px;
-    }
-
-    @media only screen and (max-width: 1365px) {
+#share-mobile {
+    .shareComments {
         position: absolute;
-        top: 0px;
+        top: 50px;
         left: 0;
         right: 0;
-    }
 
-    @media only screen and (max-width: 975px) {
-        position: static;
-        margin-bottom: 0px;
-    }
+        @media only screen and (max-width: 1480px) {
+            top: 25px;
+        }
 
+        @media only screen and (max-width: 1365px) {
+            position: absolute;
+            top: 0px;
+            left: 0;
+            right: 0;
+        }
+
+        @media only screen and (max-width: 1065px) {
+            position: static;
+            margin-bottom: 0px;
+        }
+
+    }
 }
+
 
 
 // content after illustraton
 
 .story {
     margin-bottom: 150px;
+
+    @media only screen and (max-width: 700px) {
+        margin-bottom: 100px;
+    }
 
     header#storyHead {
         @media only screen and (min-width: 1065px) {
@@ -228,7 +245,8 @@ body {
 .dropcap {
     color: $red;
     margin-top: 3px;
-    margin-bottom: -3px;
+    padding-top: 6px;
+    margin-bottom: -4px;
 }
 
 
@@ -261,6 +279,7 @@ body {
         color: lighten(#ccc, 20%);
         cursor: pointer;
         position: absolute;
+        z-index: 2000;
         top: 50%;
         left: 0;
         transform: translateY(-50%);
@@ -270,7 +289,7 @@ body {
         padding-bottom: 35px;
 
         @media only screen and (min-width: 975px) {
-              display: none;
+              top: 43%;
         }
     }
 
@@ -295,6 +314,8 @@ body {
         @media only screen and (min-width: 975px) {
               display: none;
         }
+
+
     }
 
     ul {
@@ -339,15 +360,34 @@ body {
     @media only screen and (max-width: 975px) {
         height: 100vh;
         background-color: #222;
-        color: white;
 
-        ul a li {
-                  display: block;
-                  color: white;
+        ul {
+            padding-top: 20px;
+
+            a li {
+                      display: block;
+                h4 {
+                    color: #888;
+                }
+            }
         }
+
+
+
+        .fa-times-circle {
+            position: absolute;
+            color: #888;
+            right: 0;
+            left: 0;
+            cursor: pointer;
+            top: 380px;
+
+            @media only screen and (min-width: 975px) {
+                  display: none;
+            }
+        }
+
     }
-
-
 
 }
 
@@ -372,12 +412,22 @@ body {
     text-align: center;
     position: relative;
 
+    @media only screen and (max-width: 700px) {
+        margin-bottom: 100px;
+    }
+
     hr {
         margin-top: 40px;
         max-width: 200px;
-        border-color: #444;
+        border-color: #555;
         border-width: 1px;
+
+        @media only screen and (max-width: 700px) {
+            margin-top: 30px;
+        }
     }
+
+
 
     h1 {
         color: #ccc;
@@ -385,12 +435,19 @@ body {
         font-size: 55px;
         text-shadow: 1px 1px 5px black;
         font-weight: bold;
+        padding-left: 15px;
+        padding-right: 15px;
 
-        @media only screen and (max-width: 1065px) {
+        @media only screen and (max-width: 1300px) {
             font-size: 35px;
             line-height: 40px;
-            padding-left: 10px;
-            padding-right: 10px;
+
+        }
+
+        @media only screen and (max-width: 700px) {
+            font-size: 25px;
+            line-height: 30px;
+
         }
     }
 
@@ -401,12 +458,17 @@ body {
         font-size: 30px;
         font-weight: bold;
         letter-spacing: 3px;
+        padding-left: 15px;
+        padding-right: 15px;
 
-        @media only screen and (max-width: 1065px) {
-            font-size: 20px;
+        @media only screen and (max-width: 1300px) {
+            font-size: 25px;
             line-height: 37px;
-            padding-left: 10px;
-            padding-right: 10px;
+        }
+
+        @media only screen and (max-width: 700px) {
+            font-size: 18px;
+            line-height: 37px;
         }
     }
     h4 {
@@ -414,16 +476,27 @@ body {
         font-size: 40px;
         max-width: 900px;
         line-height: 60px;
-        color: #444;
+        color: #555;
         font-family: $serif;
         margin-left: auto;
         margin-right: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        @media only screen and (max-width: 1300px) {
+            font-size: 22px;
+            line-height: 26px;
+        }
 
         @media only screen and (max-width: 1065px) {
+            font-size: 25px;
+            line-height: 35px;
+        }
+
+        @media only screen and (max-width: 700px) {
             font-size: 18px;
             line-height: 26px;
-            padding-left: 10px;
-            padding-right: 10px;
+            padding-top: 30px;
         }
     }
     h5 {
@@ -431,16 +504,22 @@ body {
         padding-top: 20px;
         font-size: px;
         max-width: 700px;
-        color: #444;
+        color: #555;
         font-family: $serif;
         margin-left: auto;
         margin-right: auto;
+        padding-left: 15px;
+        padding-right: 15px;
 
-        @media only screen and (max-width: 1065px) {
+        @media only screen and (max-width: 1300px) {
+            font-size: 20px;
+            line-height: 22px;
+        }
+
+        @media only screen and (max-width: 700px) {
             font-size: 15px;
             line-height: 22px;
-            padding-left: 10px;
-            padding-right: 10px;
+            padding-top: 10px;
         }
     }
 }
@@ -470,10 +549,14 @@ p.lede {
 }
 
 .videoBlock {
+    padding-top: 20px;
+    border-top: 1px solid #ccc;
+
     h6 {
         font-family: $sans;
         font-weight: bold;
         margin-bottom: 20px;
+        font-size: 14px;
     }
 }
 
@@ -513,12 +596,12 @@ p.lede {
 
 .chart-wrapper {
     margin: 90px auto;
+    max-width: 650px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
 
-    hr {
-        margin-bottom: 30px;
-        max-width: 650px;
-        border-color: #ccc;
-    }
 
     ul {
         max-width: 650px;
@@ -567,7 +650,7 @@ p.lede {
 }
 
 
-#permian-chart {
+#permian-chart, #media-chart {
     max-width: 650px;
     margin-left: auto;
     margin-right: auto;
@@ -587,4 +670,18 @@ p.lede {
     font-size: 12px;
     font-weight: bold;
     display: inline-block;
+}
+
+.years {
+    fill : $chartCopy;
+    font-family: $sans;
+    font-size: 14px;
+    display: inline-block;
+    text-align: center;
+}
+
+.totals {
+    font-family: $sans;
+    font-weight: bold;
+    font-size: 15px;
 }

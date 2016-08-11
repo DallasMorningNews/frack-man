@@ -1,0 +1,27 @@
+[
+  {
+    "name": 2012,
+    "dollars": 11609,
+    "shell": "year"
+  },
+  {
+    "name": 2013,
+    "dollars": 20717,
+    "shell": "year"
+  },
+  {
+    "name": 2014,
+    "dollars": 62044,
+    "shell": "year"
+  },
+  {
+    "name": 2015,
+    "dollars": 92603,
+    "shell": "year"
+  },
+  {
+    "name": 2016,
+    "dollars": 54779,
+    "shell": "year"
+  }
+]
