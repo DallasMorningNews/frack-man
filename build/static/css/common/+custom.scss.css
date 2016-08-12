@@ -137,7 +137,7 @@ body {
       margin-bottom: 0px; } }
 
 .story {
-  margin-bottom: 150px; }
+  margin-bottom: 120px; }
   @media only screen and (max-width: 700px) {
     .story {
       margin-bottom: 100px; } }
@@ -259,9 +259,10 @@ body {
 
 .divider {
   height: 100vh;
+  min-height: 650px;
   width: 100%;
   background-color: #222;
-  margin-bottom: 150px;
+  margin-bottom: 120px;
   text-align: center;
   position: relative; }
   @media only screen and (max-width: 700px) {
@@ -281,15 +282,21 @@ body {
     text-shadow: 1px 1px 5px black;
     font-weight: bold;
     padding-left: 15px;
-    padding-right: 15px; }
-    @media only screen and (max-width: 1300px) {
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 900px; }
+    @media only screen and (max-width: 1065px) {
       .divider h1 {
-        font-size: 35px;
-        line-height: 40px; } }
+        font-size: 40px;
+        line-height: 47px;
+        max-width: 610px; } }
     @media only screen and (max-width: 700px) {
       .divider h1 {
+        max-width: 700px;
         font-size: 25px;
-        line-height: 30px; } }
+        line-height: 30px;
+        max-width: 450px; } }
   .divider h3 {
     color: #713032;
     text-transform: uppercase;
@@ -299,7 +306,7 @@ body {
     letter-spacing: 3px;
     padding-left: 15px;
     padding-right: 15px; }
-    @media only screen and (max-width: 1300px) {
+    @media only screen and (max-width: 1065px) {
       .divider h3 {
         font-size: 25px;
         line-height: 37px; } }
@@ -309,48 +316,48 @@ body {
         line-height: 37px; } }
   .divider h4 {
     padding-top: 40px;
-    font-size: 40px;
-    max-width: 900px;
-    line-height: 60px;
+    font-size: 34px;
+    max-width: 950px;
+    line-height: 54px;
     color: #555;
     font-family: Merriweather, Georgia, serif;
     margin-left: auto;
     margin-right: auto;
     padding-left: 15px;
     padding-right: 15px; }
-    @media only screen and (max-width: 1300px) {
-      .divider h4 {
-        font-size: 22px;
-        line-height: 26px; } }
     @media only screen and (max-width: 1065px) {
       .divider h4 {
         font-size: 25px;
-        line-height: 35px; } }
+        line-height: 35px;
+        max-width: 700px; } }
     @media only screen and (max-width: 700px) {
       .divider h4 {
         font-size: 18px;
         line-height: 26px;
-        padding-top: 30px; } }
+        padding-top: 30px;
+        max-width: 350px; } }
   .divider h5 {
     font-style: italic;
     padding-top: 20px;
     font-size: px;
-    max-width: 700px;
+    max-width: 800px;
     color: #555;
     font-family: Merriweather, Georgia, serif;
     margin-left: auto;
     margin-right: auto;
     padding-left: 15px;
     padding-right: 15px; }
-    @media only screen and (max-width: 1300px) {
+    @media only screen and (max-width: 1065px) {
       .divider h5 {
-        font-size: 20px;
-        line-height: 22px; } }
+        font-size: 18px;
+        line-height: 25px;
+        max-width: 450px; } }
     @media only screen and (max-width: 700px) {
       .divider h5 {
         font-size: 15px;
         line-height: 22px;
-        padding-top: 10px; } }
+        padding-top: 10px;
+        max-width: 375px; } }
 
 .divider-text {
   position: absolute;
@@ -368,6 +375,8 @@ p.lede {
   line-height: 35px; }
 
 .videoBlock {
+  margin-top: 90px;
+  margin-bottom: 90px;
   padding-top: 20px;
   border-top: 1px solid #ccc; }
   .videoBlock h6 {

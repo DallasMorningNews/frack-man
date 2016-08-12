@@ -158,7 +158,7 @@ $(document).ready(function() {
 
 
 		var w = $("#permian-chart").width(),
-		 	h = 750;
+		 	h = 800;
 
 		var xScale = d3.scale.linear()
 						.domain([0, d3.max(data, function (d) {
@@ -220,7 +220,7 @@ $(document).ready(function() {
 			// 	}
 			// })
 			.attr("y", function(d, i) {
-				return yScale(i);
+				return yScale(i) - 3;
 			})
 			.attr("class", "labels");
 
