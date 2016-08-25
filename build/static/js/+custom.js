@@ -5,7 +5,7 @@ $(document).ready(function() {
 	var stories = [];
 	var windowWidth = $(window).width();
 	var counter = 0;
-	var sectionHeads = ["#story1", "#section2", "#section3", "#section4"];
+	var sectionHeads = ["#section2", "#section3", "#section4", "#section5"];
 
 
 	// all chart variables
@@ -31,7 +31,7 @@ $(document).ready(function() {
 
 	$(window).scroll(function() {
 		var distanceFromTop = $(this).scrollTop();
-		if (distanceFromTop >= $('#contentHeader').height() - 100) {
+		if (distanceFromTop > $('.intro-end').offset().top + $('.intro-end').height()) {
 			$('#nav').fadeIn().addClass('fixed');
 		} else {
 			$('#nav').fadeOut(0).removeClass('fixed');
@@ -113,30 +113,35 @@ $(document).ready(function() {
 	          scrollTop: target.offset().top - 70
 	        }, 1000);
 	        return false;
-		} else {
-			$('html, body').animate({
-			  scrollTop: target.offset().top - 150
-			}, 1000);
-			return false;
-		}
+		} 
 	    }
 	  });
 	});
 
-	$(function() {
-	 $('.scrollDown a').click(function() {
-	   if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-		 var target = $(this.hash);
-		 target = (target.length + 100) ? target : $('[name=' + this.hash.slice(1) +']');
-		 if (target.length) {
-		   $('html, body').animate({
-			 scrollTop: target.offset().top - 200
-		   }, 1000);
-		   return false;
-		 }
-	   }
-	 });
-   });
+	$(".scrollDown").click(function(e) {
+	    e.preventDefault();
+
+	    var target = $(this).parent("a").attr("href");
+
+	    $("html, body").animate({
+	        scrollTop: $(target).offset().top - 200
+	    }, 1000);
+	});
+
+   // function() {
+   // ('.scrollDown').click(function() {
+   //  if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+   // var target = $(this.hash);
+   // target = (target.length + 100) ? target : $('[name=' + this.hash.slice(1) +']');
+   // if (target.length) {
+   //   $('html, body').animate({
+   //  scrollTop: target.offset().top - 200
+   //   }, 1000);
+   //   return false;
+   // }
+   //  }
+   // );
+   // });
 
 
 
