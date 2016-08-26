@@ -912,7 +912,7 @@ body {
   margin-right: auto;
   width: 100%;
   color: white; }
-  @media only screen and (max-width: 1480px) {
+  @media only screen and (max-width: 1580px) {
     #contentHeader header#storyHead {
       top: 7.6rem; } }
   @media only screen and (max-width: 1365px) {
@@ -925,19 +925,29 @@ body {
     letter-spacing: 1rem;
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 8rem;
-    line-height: 6rem;
+    font-size: 9rem;
+    line-height: 7.2rem;
     margin-bottom: 0rem; }
+    @media only screen and (max-width: 1580px) {
+      #contentHeader header#storyHead h1 {
+        font-size: 6rem;
+        line-height: 5.5rem; } }
     @media only screen and (max-width: 1365px) {
       #contentHeader header#storyHead h1 {
-        font-size: 4.2rem;
-        line-height: 3.6rem; } }
+        font-size: 4.6rem;
+        line-height: 4.3rem; } }
     #contentHeader header#storyHead h1 em {
-      font-size: 4.5rem;
-      font-style: normal; }
+      font-size: 3.5rem;
+      font-style: normal;
+      letter-spacing: 0.7rem; }
+      @media only screen and (max-width: 1580px) {
+        #contentHeader header#storyHead h1 em {
+          font-size: 3rem;
+          letter-spacing: 0.5rem; } }
       @media only screen and (max-width: 1365px) {
         #contentHeader header#storyHead h1 em {
-          font-size: 2.5rem; } }
+          font-size: 2.5rem;
+          letter-spacing: 0.3rem; } }
   #contentHeader header#storyHead h2 {
     font-size: 3.5rem;
     line-height: 4.8rem; }
@@ -947,8 +957,8 @@ body {
         line-height: 3.6rem; } }
 
 #contentHeader .bylineBlock {
-  top: 50rem; }
-  @media only screen and (max-width: 1480px) {
+  top: 55rem; }
+  @media only screen and (max-width: 1580px) {
     #contentHeader .bylineBlock {
       top: 45rem; } }
   @media only screen and (max-width: 1365px) {
@@ -961,8 +971,8 @@ body {
     color: white; }
 
 .scrollDown {
-  top: 60rem; }
-  @media only screen and (max-width: 1480px) {
+  top: 65rem; }
+  @media only screen and (max-width: 1580px) {
     .scrollDown {
       top: 55rem; } }
   @media only screen and (max-width: 1365px) {
@@ -1003,9 +1013,9 @@ body {
   top: 5rem;
   left: 0;
   right: 0; }
-  @media only screen and (max-width: 1480px) {
+  @media only screen and (max-width: 1580px) {
     #share-mobile .shareComments {
-      top: 2.5rem; } }
+      top: 1.5rem; } }
   @media only screen and (max-width: 1365px) {
     #share-mobile .shareComments {
       position: absolute;

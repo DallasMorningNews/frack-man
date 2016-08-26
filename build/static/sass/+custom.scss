@@ -70,7 +70,7 @@ body {
         width: 100%;
         color: white;
 
-        @media only screen and (max-width: 1480px) {
+        @media only screen and (max-width: 1580px) {
             top: 7.6rem;
         }
 
@@ -86,21 +86,33 @@ body {
             letter-spacing: 1rem;
             text-transform: uppercase;
             font-weight: bold;
-            font-size: 8rem;
-            line-height: 6rem;
+            font-size: 9rem;
+            line-height: 7.2rem;
             margin-bottom: 0rem;
 
+            @media only screen and (max-width: 1580px) {
+                font-size: 6rem;
+                line-height: 5.5rem;
+            }
+
             @media only screen and (max-width: 1365px) {
-                font-size: 4.2rem;
-                line-height: 3.6rem;
+                font-size: 4.6rem;
+                line-height: 4.3rem;
             }
 
             em {
-                font-size: 4.5rem;
+                font-size: 3.5rem;
                 font-style: normal;
+                letter-spacing: 0.7rem;
+
+                @media only screen and (max-width: 1580px) {
+                    font-size: 3rem;
+                    letter-spacing: 0.5rem;
+                }
 
                 @media only screen and (max-width: 1365px) {
                     font-size: 2.5rem;
+                    letter-spacing: 0.3rem;
                 }
             }
         }
@@ -117,9 +129,9 @@ body {
     }
 
     .bylineBlock {
-        top: 50rem;
+        top: 55rem;
 
-        @media only screen and (max-width: 1480px) {
+        @media only screen and (max-width: 1580px) {
             top: 45rem;
         }
 
@@ -138,9 +150,9 @@ body {
 }
 
 .scrollDown {
-    top: 60rem;
+    top: 65rem;
 
-    @media only screen and (max-width: 1480px) {
+    @media only screen and (max-width: 1580px) {
         top: 55rem;
     }
 
@@ -201,8 +213,8 @@ body {
         left: 0;
         right: 0;
 
-        @media only screen and (max-width: 1480px) {
-            top: 2.5rem;
+        @media only screen and (max-width: 1580px) {
+            top: 1.5rem;
         }
 
         @media only screen and (max-width: 1365px) {
